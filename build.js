@@ -1,3 +1,5 @@
+const { writeFileSync } = require("fs");
+
 const styled = {
     css: (t, a) => {
         let r = "";
@@ -33,7 +35,48 @@ const styles = {
     }
 };
 
+const buildCssStyle = (k, o) => {
+    let r = "";
+    for (const key in o) {
+        if (Object.hasOwnProperty.call(o, key)) {
+            const element = o[key];
+            if (key === "*") {
+                r += `[${k}] { ${element} }\n`;
+                continue;    
+            }
+            r += `[${k}=${key}] { ${element} }\n`;
+        }
+    }
+    return r;
+};
+
 // build css...
+const buildCss = () => {
+    let start = "";
+    for (const key in styles) {
+        if (Object.hasOwnProperty.call(styles, key)) {
+            const element = styles[key];
+            start += buildCssStyle(key, element);
+        }
+    }
+    writeFileSync("./data-styles.css", start);
+};
 
 
 // build .d.ts
+const buildTs = () => {
+    let start = "";
+    for (const key in styles) {
+        if (Object.hasOwnProperty.call(styles, key)) {
+            const element = styles[key];
+            start += buildCssStyle(element);
+        }
+    }
+    writeFileSync("./index.d.ts", start);
+};
+
+buildCss();
+
+buildTs();
+
+console.log(`Build success`);
