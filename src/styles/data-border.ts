@@ -8,6 +8,12 @@ styled.add({
         "none": styled.css `border: none;`,
         "frame": styled.css `
             border: solid 1px;
+            border-color: ${vars.borderColor};
+            padding: ${vars.spacing};
+            border-radius: ${vars.spacing};
+        `,
+        "accent-frame": styled.css `
+            border: solid 1px;
             border-color: ${vars.accentBgColor};
             padding: ${vars.spacing};
             border-radius: ${vars.spacing};

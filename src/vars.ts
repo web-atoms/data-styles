@@ -25,6 +25,8 @@ const vars = {
     thicker: "5px",
     thickest: "6px",
 
+    borderColor: "lightgray",
+
     accentBgColor: "blue",
     accentColor: "white",
     warningColor: "#FFC107",
