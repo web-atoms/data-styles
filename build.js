@@ -1,4 +1,4 @@
-const { writeFileSync } = require("fs");
+const { writeFileSync, readFileSync } = require("fs");
 
 const styled = {
     css: (t, a) => {
@@ -59,7 +59,7 @@ const buildCss = () => {
             start += buildCssStyle(key, element);
         }
     }
-    writeFileSync("./data-styles.css", start);
+    writeFileSync("./data-styles.css", start, "utf-8");
 };
 
 
@@ -69,14 +69,47 @@ const buildTs = () => {
     for (const key in styles) {
         if (Object.hasOwnProperty.call(styles, key)) {
             const element = styles[key];
-            start += buildCssStyle(element);
+            const list = Object.keys(element).filter((x) => x !== "*").map(JSON.stringify);
+            start += `
+                    ${ JSON.stringify(key)}: ${list.join(" | ")},`;
         }
     }
-    writeFileSync("./index.d.ts", start);
+    writeFileSync("./index.d.ts", `
+    declare global {
+        namespace JSX {
+            interface IElementAttribute {
+                ${start}
+            }
+        }
+    }
+`, "utf-8");
+};
+
+const buildJS = () => {
+
+    const text = readFileSync("./data-styles.css", "utf-8");
+
+    writeFileSync("./data-styles.js", `
+        System.register([], function(_export, _context) {
+            return {
+                setters: [],
+                execute: function() {
+                    const t = ${JSON.stringify(text)};
+                    const style = document.createElement("style");
+                    style.id = "data-styles";
+                    style.textContent = t;
+                    document.head.appendChild(style);       
+                }
+            };
+        });
+    `, "utf-8");
+
 };
 
 buildCss();
 
 buildTs();
+
+buildJS();
 
 console.log(`Build success`);

@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/web-atoms/data-styles.git"
   },
+  "typings": "main.d.ts",
   "author": "",
   "license": "ISC",
   "bugs": {
