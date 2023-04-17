@@ -71,37 +71,38 @@ const buildTs = () => {
             const element = styles[key];
             const list = Object.keys(element).filter((x) => x !== "*").map(JSON.stringify);
             start += `
-                    ${ JSON.stringify(key)}: ${list.join(" | ")},`;
-        }
+        ${ JSON.stringify(key)}?: ${list.join(" | ")},`;
+}
     }
     writeFileSync("./data-styles.d.ts", `
-    declare global {
-        namespace JSX {
-            interface IElementAttribute {
-                ${start}
-            }
-        }
+declare namespace JSX {
+    interface IntrinsicAttributes { ${start}
     }
+}
 `, "utf-8");
 };
 
 const buildJS = () => {
 
-    const text = readFileSync("./data-styles.css", "utf-8");
+    let text = readFileSync("./data-styles.css", "utf-8");
+
+    text = text.replace(/\`/, "``");
+
+    text = "`" + text + "`";
 
     writeFileSync("./data-styles.js", `
-        System.register([], function(_export, _context) {
-            return {
-                setters: [],
-                execute: function() {
-                    const t = ${JSON.stringify(text)};
-                    const style = document.createElement("style");
-                    style.id = "data-styles";
-                    style.textContent = t;
-                    document.head.appendChild(style);       
-                }
-            };
-        });
+System.register([], function(_export, _context) {
+    return {
+        setters: [],
+        execute: function() {
+            const t = ${text};
+            const style = document.createElement("style");
+            style.id = "data-styles";
+            style.textContent = t;
+            document.head.appendChild(style);       
+        }
+    };
+});
     `, "utf-8");
 
 };
