@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled";
+
+styled.add({
     "data-text-decoration": {
         "*": styled.css `text-decoration: attr(data-text-decoration) !important;`,
         "underline": styled.css `text-decoration: underline !important;`,
@@ -7,4 +9,4 @@ module.exports = {
         "line-through": styled.css `text-decoration: line-through !important;`,
         "wavy": styled.css `text-decoration: wavy !important;`,
     }
-};
+});

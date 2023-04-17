@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled"
+
+styled.add({
     "data-text-align": {
         "*": styled.css `font-weight: attr(data-text-align) !important;`,
         "left": styled.css `text-align: left !important;`,
@@ -6,4 +8,4 @@ module.exports = {
         "center": styled.css `text-align: center !important;`,
         "justify": styled.css `text-align: justify !important;`,
     }
-}
+});

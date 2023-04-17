@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled";
+
+styled.add({
     "data-align-items": {
         "*": styled.css `align-items: attr(data-align-items) !important;`,
         "start": styled.css `align-items: start !important;`,
@@ -10,4 +12,4 @@ module.exports = {
         "normal": styled.css `align-items: normal !important;`,
         "baseline": styled.css `align-items: baseline !important;`,
     }
-};
+});

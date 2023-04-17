@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/web-atoms/data-styles#readme",
   "devDependencies": {
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
   }
 }

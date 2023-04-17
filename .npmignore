@@ -12,3 +12,5 @@ typedoc.js
 .travis.yml
 alpha.bat
 generated-cert-1
+src
+dist

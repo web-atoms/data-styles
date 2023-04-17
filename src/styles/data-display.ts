@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled";
+
+styled.add({
     "data-display": {
         "*": styled.css `color: attr(data-display) !important;`,
         "flex": styled.css `display: flex !important;`,
@@ -10,4 +12,4 @@ module.exports = {
             flex-direction: column;
         `,
     }
-};
+});

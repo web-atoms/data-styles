@@ -1,4 +1,7 @@
-module.exports = {
+import styled from "../styled";
+import vars from "../vars";
+
+styled.add({
     "data-color": {
         "*": styled.css `color: attr(data-color) !important;`,
         "red": styled.css `color: red !important;`,
@@ -11,6 +14,6 @@ module.exports = {
         "fuchsia": styled.css `color: fuchsia !important;`,
         "black": styled.css `color: black !important;`,
         "white": styled.css `color: white !important;`,
-        "accent": styled.css `color: var(--accent-color, white) !important;`,
+        "accent": styled.css `color: ${vars.accentColor} !important;`,
     }
-};
+});

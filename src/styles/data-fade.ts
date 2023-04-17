@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled";
+
+styled.add({
     "data-fade": {
         "bottom": styled.css `
             position: relative !important;
@@ -11,7 +13,7 @@ module.exports = {
             content: "";
             margin: 10;
             pointer-events: none;
-            background: linear-gradient(to top, rgba(255,255,255, 1) 1px, rgba(255,255,255, 0) 16px )
+            background: linear-gradient(to top, rgba(255,255,255, 1) 1px, rgba(255,255,255, 0) 16px );
         `),
     }
-};
+});

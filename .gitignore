@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+data-styles.css
+data-styles.d.ts
+data-styles.js

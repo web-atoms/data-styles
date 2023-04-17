@@ -1,4 +1,6 @@
-module.exports = {
+import styled from "../styled";
+
+styled.add({
     "data-text-overflow": {
         "*": styled.css `text-overflow: attr(data-text-overflow) !important;`,
         "ellipsis": styled.css `
@@ -9,4 +11,4 @@ module.exports = {
             overflow: hidden;
         `
     }
-};
+});
