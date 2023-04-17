@@ -74,7 +74,7 @@ const buildTs = () => {
                     ${ JSON.stringify(key)}: ${list.join(" | ")},`;
         }
     }
-    writeFileSync("./index.d.ts", `
+    writeFileSync("./data-styles.d.ts", `
     declare global {
         namespace JSX {
             interface IElementAttribute {
