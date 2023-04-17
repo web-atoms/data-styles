@@ -53,7 +53,19 @@ styled.add({
         "flex-wrap": styled.css `
             display: flex;
             gap: var( --spacing, 5px);
+            flex-wrap: wrap;
+        `,
 
+        "flex": styled.css `
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        `,
+
+        "flex-center": styled.css `
+            display: flex;
+            justify-items: center;
+            align-items: center;
         `
     }
 });

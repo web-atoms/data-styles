@@ -51,9 +51,21 @@ class StyleFragment {
     }
 }
 
+export type IStyleFragments = {
+    [key: string]: StyleFragment;
+};
+
+export type IStyleFragmentSet = {
+    [key: string]: IStyleFragments;
+}
+
+const styles: IStyleFragmentSet[] = [];
+
 const styled = {
 
-    styles: {},
+    get styles() {
+        return styles;
+    },
 
     css: (t: TemplateStringsArray, ... a: any[]) => {
         let r = "";
@@ -67,14 +79,9 @@ const styled = {
         return StyleFragment.newStyle( { content: r });
     },
 
-    add(x) {
-        for (const key in x) {
-            if (Object.prototype.hasOwnProperty.call(x, key)) {
-                const element = x[key];
-                this.styles[key] = element;
-            }
-        }
-    }
+    add(x: IStyleFragmentSet) {
+        styles.push(x);
+    },
 };
 
 export default styled;

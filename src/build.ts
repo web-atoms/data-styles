@@ -1,6 +1,6 @@
 import { writeFileSync, readFileSync, readdirSync } from "fs";
 import { join, parse } from "path";
-import styled from "./styled";
+import styled, { IStyleFragments } from "./styled";
 
 const allStyles = styled.styles;
 
@@ -16,14 +16,16 @@ const buildAllStyles = (start, styles) => {
         if (parsedPath.ext !== ".js") {
             continue;
         }
-        require(join(parsedPath.dir, parsedPath.name ));
+        const file = join(parsedPath.dir, parsedPath.name );
+        console.log(`Loading ${file}`);
+        require(file);
     }
 
 };
 
 buildAllStyles(join( __dirname, "styles"), allStyles);
 
-const buildCssStyle = (k, o) => {
+const buildCssStyle = (k: string, o: IStyleFragments) => {
     let r = "";
     for (const key in o) {
         if (Object.hasOwnProperty.call(o, key)) {
@@ -39,31 +41,38 @@ const buildCssStyle = (k, o) => {
     return r;
 };
 
+const outputPath = (name) => join(__dirname, ".." , name);
+
 // build css...
 const buildCss = () => {
     let start = "";
-    for (const key in allStyles) {
-        if (Object.hasOwnProperty.call(allStyles, key)) {
-            const element = allStyles[key];
-            start += buildCssStyle(key, element);
+    for (const iterator of allStyles) {
+        for (const key in iterator) {
+            if (Object.prototype.hasOwnProperty.call(iterator, key)) {
+                const element = iterator[key];
+                start += buildCssStyle(key, element);
+            }
         }
     }
-    writeFileSync("../data-styles.css", start, "utf-8");
+    writeFileSync(outputPath("data-styles.css"), start, "utf-8");
 };
 
 
 // build .d.ts
 const buildTs = () => {
     let start = "";
-    for (const key in allStyles) {
-        if (Object.hasOwnProperty.call(allStyles, key)) {
-            const element = allStyles[key];
-            const list = Object.keys(element).filter((x) => x !== "*").map(JSON.stringify as any);
-            start += `
+    for (const style of allStyles) {
+        for (const key in style) {
+            if (Object.prototype.hasOwnProperty.call(style, key)) {
+                const element = style[key];
+                const list = Object.keys(element).filter((x) => x !== "*").map(JSON.stringify as any);
+                start += `
         ${ JSON.stringify(key)}?: ${list.join(" | ")},`;
-}
+                
+                }
+        }
     }
-    writeFileSync("../data-styles.d.ts", `
+    writeFileSync(outputPath("data-styles.d.ts"), `
 declare namespace JSX {
     interface IntrinsicAttributes { ${start}
     }
@@ -73,13 +82,13 @@ declare namespace JSX {
 
 const buildJS = () => {
 
-    let text = readFileSync("../data-styles.css", "utf-8");
+    let text = readFileSync(outputPath("data-styles.css"), "utf-8");
 
     text = text.replace(/\`/, "``");
 
     text = "`" + text + "`";
 
-    writeFileSync("../data-styles.js", `
+    writeFileSync(outputPath("data-styles.js"), `
 System.register([], function(_export, _context) {
     return {
         setters: [],
