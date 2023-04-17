@@ -3,17 +3,17 @@ import vars from "../vars";
 
 styled.add({
     "data-color": {
-        "*": styled.css `color: attr(data-color) !important;`,
-        "red": styled.css `color: red !important;`,
-        "blue": styled.css `color: blue !important;`,
-        "green": styled.css `color: green !important;`,
-        "lightgreen": styled.css `color: lightgreen !important;`,
-        "lightyellow": styled.css `color: lightyellow !important;`,
-        "gold": styled.css `color: gold !important;`,
-        "goldenrod": styled.css `color: goldenrod !important;`,
-        "fuchsia": styled.css `color: fuchsia !important;`,
-        "black": styled.css `color: black !important;`,
-        "white": styled.css `color: white !important;`,
-        "accent": styled.css `color: ${vars.accentColor} !important;`,
+        "*": styled.css `color: attr(data-color) ;`,
+        "red": styled.css `color: red ;`,
+        "blue": styled.css `color: blue ;`,
+        "green": styled.css `color: green ;`,
+        "lightgreen": styled.css `color: lightgreen ;`,
+        "lightyellow": styled.css `color: lightyellow ;`,
+        "gold": styled.css `color: gold ;`,
+        "goldenrod": styled.css `color: goldenrod ;`,
+        "fuchsia": styled.css `color: fuchsia ;`,
+        "black": styled.css `color: black ;`,
+        "white": styled.css `color: white ;`,
+        "accent": styled.css `color: ${vars.accentColor} ;`,
     }
 });

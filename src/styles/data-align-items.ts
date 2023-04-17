@@ -2,14 +2,14 @@ import styled from "../styled";
 
 styled.add({
     "data-align-items": {
-        "*": styled.css `align-items: attr(data-align-items) !important;`,
-        "start": styled.css `align-items: start !important;`,
-        "self-start": styled.css `align-items: self-start !important;`,
-        "end": styled.css `align-items: end !important;`,
-        "self-end": styled.css `align-items: self-end !important;`,
-        "center": styled.css `align-items: center !important;`,
-        "stretch": styled.css `align-items: stretch !important;`,
-        "normal": styled.css `align-items: normal !important;`,
-        "baseline": styled.css `align-items: baseline !important;`,
+        "*": styled.css `align-items: attr(data-align-items) ;`,
+        "start": styled.css `align-items: start ;`,
+        "self-start": styled.css `align-items: self-start ;`,
+        "end": styled.css `align-items: end ;`,
+        "self-end": styled.css `align-items: self-end ;`,
+        "center": styled.css `align-items: center ;`,
+        "stretch": styled.css `align-items: stretch ;`,
+        "normal": styled.css `align-items: normal ;`,
+        "baseline": styled.css `align-items: baseline ;`,
     }
 });

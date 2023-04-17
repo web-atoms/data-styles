@@ -3,7 +3,7 @@ import styled from "../styled";
 styled.add({
     "data-fade": {
         "bottom": styled.css `
-            position: relative !important;
+            position: relative ;
         `.and(":after", styled.css `
             position: absolute;
             left: 0;
