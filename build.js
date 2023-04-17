@@ -1,4 +1,54 @@
-const { writeFileSync, readFileSync } = require("fs");
+const { writeFileSync, readFileSync, readdirSync } = require("fs");
+const { join, parse } = require("path");
+
+class StyleFragment {
+
+    static newStyle( { selector = "", content = "", children = void 0}) {
+        return new StyleFragment( { selector, content, children })
+    }
+
+    constructor({ selector, content, children }) {
+        this.selector = selector;
+        this.content = content;
+        this.children = children;
+    }
+
+    expand(selector) {
+        selector ??= this.selector;
+        let content = `${selector} {${this.content}}`;
+        if (this.children) {
+            for (const iterator of this.children) {
+                content += "\n";
+                content += iterator.expand(selector + iterator.selector);
+            }
+        }
+        return content;
+    }
+
+    toString() {
+        return this.expand();
+    }
+
+    and (selector, sf ) {
+        sf.selector = selector;
+        this.children ??= [];
+        this.children.push(sf);
+        return this;
+    }
+
+    child (selector, sf ) {
+        sf.selector = " > " + selector;
+        this.children ??= [];
+        this.children.push(sf);
+        return this;
+    }
+    nested (selector, sf ) {
+        sf.selector = " " + selector;
+        this.children ??= [];
+        this.children.push(sf);
+        return this;
+    }
+}
 
 const styled = {
     css: (t, a) => {
@@ -7,33 +57,37 @@ const styled = {
             const element = t[index];
             r += element;
         }
-        return r;
+        return StyleFragment.newStyle( { content: r });
     }
 };
+
+global.styled = styled;
 
 
 const styles = {
-    "data-font-weight": {
-        "*": styled.css `font-weight: attr(data-font-weight) !important;`,
-        "bold": styled.css `font-weight: bold !important;`,
-        "normal": styled.css `font-weight: normal !important;`,
-        "bolder": styled.css `font-weight: bolder !important;`,
-        "lighter": styled.css `font-weight: lighter !important;`,
-    },
-    "data-font-style": {
-        "*": styled.css `font-weight: attr(data-font-style) !important;`,
-        "italic": styled.css `font-style: italic !important;`,
-        "normal": styled.css `font-style: normal !important;`,
-        "oblique": styled.css `font-style: oblique !important;`,
-    },
-    "data-text-align": {
-        "*": styled.css `font-weight: attr(data-text-align) !important;`,
-        "left": styled.css `text-align: left !important;`,
-        "right": styled.css `text-align: right !important;`,
-        "center": styled.css `text-align: center !important;`,
-        "justify": styled.css `text-align: justify !important;`,
-    }
 };
+
+const buildAllStyles = (start, styles) => {
+
+    for(const f of readdirSync(start, { withFileTypes: true })) {
+        const name = join(start, f.name);
+        if(f.isDirectory()) {
+            buildAllStyles(name, styles);
+            continue;
+        }
+        const parsedPath = parse(name);
+        const x = require("./" + join(parsedPath.dir, parsedPath.name ));
+        for (const key in x) {
+            if (Object.hasOwnProperty.call(x, key)) {
+                const element = x[key];
+                styles[key] = element;
+            }
+        }
+    }
+
+};
+
+buildAllStyles("./styles", styles);
 
 const buildCssStyle = (k, o) => {
     let r = "";
@@ -41,10 +95,11 @@ const buildCssStyle = (k, o) => {
         if (Object.hasOwnProperty.call(o, key)) {
             const element = o[key];
             if (key === "*") {
-                r += `[${k}] { ${element} }\n`;
+                r += `[${k}] ${element}\n`;
                 continue;    
             }
-            r += `[${k}=${key}] { ${element} }\n`;
+            r += element.expand(`[${k}=${key}]`) + "\n";
+            // r += `[${k}=${key}] { ${element} }\n`;
         }
     }
     return r;
