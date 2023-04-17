@@ -1,0 +1,40 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "coverage-gutters.lcovname": "./coverage/lcov.info",
+    "cSpell.words": [
+        "Akash",
+        "Descendents",
+        "ILVM",
+        "IUMD",
+        "Kava",
+        "Scroller",
+        "Selectable",
+        "Simmi",
+        "bindables",
+        "bodyformmodel",
+        "downlevel",
+        "grayscale",
+        "keyframename",
+        "lightgray",
+        "mouseevent",
+        "nesw",
+        "nowrap",
+        "nwse",
+        "posttest",
+        "postversion",
+        "rawbody",
+        "typedoc",
+        "xmlbody",
+        "xmlhttprequest",
+        "xnode"
+    ]
+}

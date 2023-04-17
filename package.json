@@ -1,0 +1,20 @@
+{
+  "name": "@web-atoms/data-styles",
+  "version": "1.0.0",
+  "description": "Easy to use Data Styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-atoms/data-styles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-atoms/data-styles/issues"
+  },
+  "homepage": "https://github.com/web-atoms/data-styles#readme"
+}
