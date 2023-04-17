@@ -31,7 +31,9 @@ const buildCssStyle = (k: string, o: IStyleFragments) => {
         if (Object.hasOwnProperty.call(o, key)) {
             const element = o[key];
             if (key === "*") {
-                r += `[${k}] ${element}\n`;
+                // since attr is experimental
+                // we are not adding it now
+                // r += `[${k}] ${element}\n`;
                 continue;    
             }
             r += element.expand(`[${k}=${key}]`) + "\n";
