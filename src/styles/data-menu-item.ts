@@ -9,6 +9,7 @@ styled.add({
             align-items: center;
             align-content: center;
             cursor: pointer;
+            border-style: solid;
             border-radius: ${vars.spacing};
             border-width: 1px;
             border-color: transparent;
