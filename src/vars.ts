@@ -41,7 +41,7 @@ const vars = {
 
 };
 
-const camelToSnakeCase = str => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+const camelToSnakeCase = str => str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
 
 for (const key in vars) {
     if (Object.prototype.hasOwnProperty.call(vars, key)) {
