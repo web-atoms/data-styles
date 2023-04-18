@@ -90,6 +90,7 @@ styled.add({
             display: flex;
             justify-items: center;
             align-items: center;
+            justify-content: center;
             gap: ${vars.spacing};
         `
     }
