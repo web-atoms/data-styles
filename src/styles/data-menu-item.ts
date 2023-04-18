@@ -27,7 +27,10 @@ styled.add({
             border-left-width: medium;
         `)
         .child("i", styled.css `
-            color: ${vars.accentBgColor}
+            color: ${vars.accentBgColor};
+        `)
+        .child("[data-element=icon]", styled.css `
+            color: ${vars.accentBgColor};
         `)
         
     }
