@@ -26,7 +26,7 @@ styled.add({
             border-left-color: ${vars.accentBgColor};
             border-left-width: medium;
         `)
-        .and("i", styled.css `
+        .child("i", styled.css `
             color: ${vars.accentBgColor}
         `)
         
