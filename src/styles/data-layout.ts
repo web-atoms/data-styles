@@ -23,6 +23,10 @@ styled.add({
             .nested("button", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
+                border-radius: 9999px;
+                padding: ${vars.spacingSmall};
+                padding-left: ${vars.spacing};
+                padding-right: ${vars.spacing};
             `.and(":hover", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
@@ -43,6 +47,10 @@ styled.add({
             .nested("button", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
+                border-radius: 9999px;
+                padding: ${vars.spacingSmall};
+                padding-left: ${vars.spacing};
+                padding-right: ${vars.spacing};
             `.and(":hover", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
