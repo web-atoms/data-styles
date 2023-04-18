@@ -15,6 +15,7 @@ const prepareVar = (name, def) => {
 
 const vars = {
     spacing: "5px",
+    spacingSmall: "2px",
     spacingMedium: "7px",
     spacingLarge: "10px",
 
