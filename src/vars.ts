@@ -33,7 +33,10 @@ const vars = {
 
     fontSizeSmall: "0.8125em",
 
-    commandBgColor: "#F0F0F0"
+    commandBgColor: "#F0F0F0",
+
+    menuBgColor: "#808080",
+    menuColor: "#F0F0F0"
 
 };
 

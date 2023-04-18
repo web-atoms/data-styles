@@ -8,6 +8,7 @@ styled.add({
             display: flex;
             align-items: center;
             align-content: center;
+            gap: ${vars.spacing};
         `.child("*", styled.css `flex: 0 0 auto;`),
 
         "command-row": styled.css `
@@ -17,6 +18,7 @@ styled.add({
             background-color: ${vars.commandBgColor};
             border-radius: 9999px;
             padding: 7px;
+            gap: ${vars.spacing};
         `.child("*", styled.css `flex: 0 0 auto;`)
         .nested("button", styled.css `
                 background-color: ${vars.accentBgColor};
@@ -36,6 +38,7 @@ styled.add({
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: ${vars.spacing};
         `,
 
         "grid2x2": styled.css `
@@ -52,7 +55,7 @@ styled.add({
 
         "flex-wrap": styled.css `
             display: flex;
-            gap: var( --spacing, 5px);
+            gap: ${vars.spacing};
             flex-wrap: wrap;
         `,
 
@@ -60,12 +63,14 @@ styled.add({
             display: flex;
             align-items: center;
             justify-content: start;
+            gap: ${vars.spacing};
         `,
 
         "flex-center": styled.css `
             display: flex;
             justify-items: center;
             align-items: center;
+            gap: ${vars.spacing};
         `
     }
 });
