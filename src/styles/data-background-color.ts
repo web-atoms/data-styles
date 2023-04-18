@@ -14,6 +14,6 @@ styled.add({
         "fuchsia": styled.css `color: fuchsia ;`,
         "black": styled.css `color: black ;`,
         "white": styled.css `color: white ;`,
-        "accent": styled.css `color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `color: ${vars.accentColor} ;`,
     }
 });

@@ -23,14 +23,14 @@ styled.add({
         `)
         .and("[data-selected=true]", styled.css `
             font-weight: bold;
-            border-left-color: ${vars.accentBgColor};
+            border-left-color: ${vars.accentColor};
             border-left-width: medium;
         `)
         .child("i", styled.css `
-            color: ${vars.accentBgColor};
+            color: ${vars.accentColor};
         `)
         .child("[data-element=icon]", styled.css `
-            color: ${vars.accentBgColor};
+            color: ${vars.accentColor};
         `)
         
     }

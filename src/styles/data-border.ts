@@ -14,7 +14,7 @@ styled.add({
         `,
         "accent-frame": styled.css `
             border: solid 1px;
-            border-color: ${vars.accentBgColor};
+            border-color: ${vars.accentColor};
             padding: ${vars.spacing};
             border-radius: ${vars.spacing};
         `
@@ -44,7 +44,7 @@ styled.add({
 
     "data-border-color": {
         "*": styled.css `border-color: attr(data-border-color) ;`,
-        "accent": styled.css `border-color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `border-color: ${vars.accentColor} ;`,
     },
     
     "data-border-radius": {
@@ -77,7 +77,7 @@ styled.add({
 
     "data-border-left-color": {
         "*": styled.css `border-left-color: attr(data-border-left-color) ;`,
-        "accent": styled.css `border-left-color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `border-left-color: ${vars.accentColor} ;`,
     },    
 
     "data-border-right-style": {
@@ -105,7 +105,7 @@ styled.add({
 
     "data-border-right-color": {
         "*": styled.css `border-right-color: attr(data-border-right-color) ;`,
-        "accent": styled.css `border-right-color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `border-right-color: ${vars.accentColor} ;`,
     },
     "data-border-top-style": {
         "*": styled.css `border-top-style: attr(data-border-top-style) ;`,
@@ -132,7 +132,7 @@ styled.add({
 
     "data-border-top-color": {
         "*": styled.css `border-top-color: attr(data-border-top-color) ;`,
-        "accent": styled.css `border-top-color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `border-top-color: ${vars.accentColor} ;`,
     },    
 
     "data-border-bottom-style": {
@@ -160,7 +160,7 @@ styled.add({
 
     "data-border-bottom-color": {
         "*": styled.css `border-bottom-color: attr(data-border-bottom-color) ;`,
-        "accent": styled.css `border-bottom-color: ${vars.accentBgColor} ;`,
+        "accent": styled.css `border-bottom-color: ${vars.accentColor} ;`,
     },    
 
     "data-border-top-left-radius": {

@@ -21,10 +21,11 @@ styled.add({
             gap: ${vars.spacing};
         `.child("*", styled.css `flex: 0 0 auto;`)
         .nested("button", styled.css `
-                background-color: ${vars.accentBgColor};
-                color: ${vars.accentColor};
+                background-color: ${vars.accentColor};
+                color: ${vars.accentTextColor};
             `.and(":hover", styled.css `
-                background-color: ${vars.accentBgColor};
+                background-color: ${vars.accentColor};
+                color: ${vars.accentTextColor};
             `
         )),
     

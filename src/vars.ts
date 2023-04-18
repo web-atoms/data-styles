@@ -28,8 +28,8 @@ const vars = {
 
     borderColor: "lightgray",
 
-    accentBgColor: "blue",
-    accentColor: "white",
+    accentColor: "blue",
+    accentTextColor: "white",
     warningColor: "#FFC107",
 
     fontSizeSmall: "0.8125em",
