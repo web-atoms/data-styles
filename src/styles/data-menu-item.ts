@@ -13,6 +13,7 @@ styled.add({
             border-width: 1px;
             border-color: transparent;
             gap: ${vars.spacing};
+            padding: ${vars.spacing};
         `.child("*", styled.css `
             flex: 0 0 auto;
         `)
