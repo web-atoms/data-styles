@@ -63,17 +63,28 @@ const buildCss = () => {
 // build .d.ts
 const buildTs = () => {
     let start = "";
+
+    const map = new Map<string, string[]>();
+
     for (const style of allStyles) {
         for (const key in style) {
             if (Object.prototype.hasOwnProperty.call(style, key)) {
                 const element = style[key];
-                const list = Object.keys(element).filter((x) => x !== "*").map(JSON.stringify as any);
-                start += `
-        ${ JSON.stringify(key)}?: ${list.join(" | ")},`;
-                
+                let list = map.get(key);
+                if (!list) {
+                    list = [];
+                    map.set(key, list);
                 }
+                list.push(... Object.keys(element).filter((x) => x !== "*").map(JSON.stringify as any) as string[]);                
+            }
         }
     }
+
+    for (const [key, value] of map) {
+        start += `
+        ${JSON.stringify(key)}?: ${value.join(" | ")},`;
+    }
+
     writeFileSync(outputPath("data-styles.d.ts"), `
 declare namespace JSX {
     interface IntrinsicAttributes { ${start}
