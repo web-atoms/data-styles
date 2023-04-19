@@ -5,21 +5,21 @@ styled.add({
     "data-layout": {
 
         "row": styled.css `
-            display: flex;
-            align-items: center;
-            align-content: center;
-            gap: ${vars.spacing};
-        `.child("*", styled.css `flex: 0 0 auto;`),
+                display: flex;
+                align-items: center;
+                align-content: center;
+                gap: ${vars.spacing};
+            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`),
 
         "command-row": styled.css `
-            display: flex;
-            align-items: center;
-            align-content: center;
-            background-color: ${vars.commandBgColor};
-            border-radius: 9999px;
-            padding: 7px;
-            gap: ${vars.spacing};
-        `.child("*", styled.css `flex: 0 0 auto;`)
+                display: flex;
+                align-items: center;
+                align-content: center;
+                background-color: ${vars.commandBgColor};
+                border-radius: 9999px;
+                padding: 7px;
+                gap: ${vars.spacing};
+            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`)
             .nested("button", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
@@ -34,16 +34,16 @@ styled.add({
         )),
     
         "sticky-command-row": styled.css `
-            position: sticky;
-            bottom: ${vars.spacing};
-            display: flex;
-            align-items: center;
-            align-content: center;
-            background-color: ${vars.commandBgColor};
-            border-radius: 9999px;
-            padding: 7px;
-            gap: ${vars.spacing};
-        `.child("*", styled.css `flex: 0 0 auto;`)
+                position: sticky;
+                bottom: ${vars.spacing};
+                display: flex;
+                align-items: center;
+                align-content: center;
+                background-color: ${vars.commandBgColor};
+                border-radius: 9999px;
+                padding: 7px;
+                gap: ${vars.spacing};
+            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`)
             .nested("button", styled.css `
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
