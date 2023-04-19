@@ -16,7 +16,6 @@ styled.add({
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: ${vars.spacing};
         ` ,
 
@@ -25,7 +24,6 @@ styled.add({
             flex-direction: column;
             align-items: stretch;
             justify-items: stretch;
-            justify-content: flex-start;
             padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
         `.child("*", styled.css `
