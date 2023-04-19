@@ -85,3 +85,21 @@ const styled = {
 };
 
 export default styled;
+
+export type IStyleValue = string | { name: string, value: string };
+
+export const pair = (name: string , value?: string ) => ( !value ? (value=name, name = name.replace(" ", "-")) : (name), { name, value });
+
+export const createSet = (name: string, values: IStyleValue[]) => {
+    const r = {
+        "*": styled.css `${name}: attr(${"data-" + name});`
+    };
+    for (const iterator of values) {
+        if (typeof iterator === "string") {
+            r[iterator] = styled.css `${name}: ${iterator};`;
+            continue;
+        }
+        r[iterator.name] = styled.css `${name}: ${iterator.value};`;
+    }
+    return r as any;
+};

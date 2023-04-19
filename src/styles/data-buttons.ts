@@ -11,7 +11,7 @@ styled.add({
             gap: ${vars.spacing};
             padding: ${vars.spacingSmall};
             padding-left: ${vars.spacing};
-            padding-left: ${vars.spacing};
+            padding-right: ${vars.spacing};
             cursor: pointer;
         `
     }
