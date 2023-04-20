@@ -16,9 +16,8 @@ const createButton = (
             padding-left: ${vars.spacing};
             padding-right: ${vars.spacing};
             cursor: pointer;
+            border: solid 1px ${borderColor};
             border-radius: 9999px;
-            border-width: 1px;
-            border-color: ${borderColor};
             ${backgroundColor ? "background-color:" + backgroundColor + ";" : ""}
             ${color ? "color:" + color + ";" : ""}
         `.help(`${name}button: Text Button, ${help}`),
@@ -31,9 +30,8 @@ const createButton = (
             padding-left: ${vars.spacing};
             padding-right: ${vars.spacing};
             cursor: pointer;
+            border: solid 1px ${borderColor};
             border-radius: 9999px;
-            border-width: 1px;
-            border-color: ${borderColor};
             ${backgroundColor ? "background-color:" + backgroundColor + ";" : ""}
             ${color ? "color:" + color + ";" : ""}
         `.help(`${name}icon-button: Horizontal centered flex layout, ${help}`),
