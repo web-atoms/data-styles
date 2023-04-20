@@ -75,7 +75,19 @@ const buildTs = () => {
                     list = [];
                     map.set(key, list);
                 }
-                list.push(... Object.keys(element).filter((x) => x !== "*").map(JSON.stringify as any) as string[]);                
+                for (const [key, value] of Object.entries(element)) {                    
+                    if (key === "*") {
+                        continue;
+                    }
+                    const sf = value;
+                    const text = value.helpText
+                        ? `/** ${value.helpText} */\n${JSON.stringify(key)}`
+                        : `${JSON.stringify(key)}`;
+                    list.push(text);
+                }
+                // list.push(... Object.keys(element)
+                //     .filter((x) => x !== "*")
+                //     .map((x) => JSON.stringify(x))) as string[]);                
             }
         }
     }

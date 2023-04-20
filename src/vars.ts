@@ -30,7 +30,21 @@ const vars = {
 
     accentColor: "blue",
     accentTextColor: "white",
+
     warningColor: "#FFC107",
+    warningTextColor: "darkgray",
+
+    stopColor: "red",
+    stopTextColor: "white",
+
+    goColor: "green",
+    goTextColor: "white",
+
+    acceptColor: "blue",
+    acceptTextColor: "white",
+
+    rejectColor: "red",
+    rejectTextColor: "white",
 
     fontSizeSmall: "0.8125em",
 

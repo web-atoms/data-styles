@@ -7,6 +7,7 @@ class StyleFragment {
     private selector: string;
     private content: string;
     private children: StyleFragment[];
+    public helpText: string;
 
     constructor({ selector, content, children }) {
         this.selector = selector;
@@ -47,6 +48,10 @@ class StyleFragment {
         sf.selector = " " + selector;
         this.children ??= [];
         this.children.push(sf);
+        return this;
+    }
+    help (text) {
+        this.helpText = text;
         return this;
     }
 }
