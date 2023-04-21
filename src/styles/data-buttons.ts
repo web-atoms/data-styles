@@ -13,8 +13,8 @@ const createButton = (
     return {
         [name + "button"]: styled.css `
             padding: ${vars.spacingSmall};
-            padding-left: ${vars.spacing};
-            padding-right: ${vars.spacing};
+            padding-left: ${vars.spacingMedium};
+            padding-right: ${vars.spacingMedium};
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
@@ -27,8 +27,8 @@ const createButton = (
             justify-content: center;
             gap: ${vars.spacing};
             padding: ${vars.spacingSmall};
-            padding-left: ${vars.spacing};
-            padding-right: ${vars.spacing};
+            padding-left: ${vars.spacingMedium};
+            padding-right: ${vars.spacingMedium};
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
