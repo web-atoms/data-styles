@@ -15,23 +15,29 @@ styled.add({
             border-color: transparent;
             gap: ${vars.spacing};
             padding: ${vars.spacing};
-        `.child("*", styled.css `
-            flex: 0 0 auto;
-        `)
-        .and(":hover", styled.css `
-            border-color: ${vars.borderColor};
-        `)
-        .and("[data-selected=true]", styled.css `
-            font-weight: bold;
-            border-left-color: ${vars.accentColor};
-            border-left-width: medium;
-        `)
-        .child("i", styled.css `
-            color: ${vars.accentColor};
-        `)
-        .child("[data-element=icon]", styled.css `
-            color: ${vars.accentColor};
-        `)
-        
+
+            &:hover {
+                border-color: ${vars.borderColor};
+            }
+
+            &[data-selected=true] {
+                font-weight: bold;
+                border-left-color: ${vars.accentColor};
+                border-left-width: medium;
+            }
+
+            & > * {
+                flex: 0 0 auto;
+            }
+
+            & > i {
+                color: ${vars.accentColor};
+            }
+
+            & > [data-element=icon] {
+                color: ${vars.accentColor};
+            }
+
+        `        
     }
 });

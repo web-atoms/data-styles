@@ -26,8 +26,11 @@ styled.add({
             justify-items: stretch;
             padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
-        `.child("*", styled.css `
-            width: 100%;
-        `)
+
+            & > * {
+                width: 100%;
+            }
+
+        `
     }
 })

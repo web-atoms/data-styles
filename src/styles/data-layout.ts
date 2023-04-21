@@ -5,57 +5,84 @@ styled.add({
     "data-layout": {
 
         "row": styled.css `
-                display: flex;
-                align-items: center;
-                align-content: center;
-                gap: ${vars.spacing};
-            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`),
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: ${vars.spacing};
+
+            & > *:not([data-flex]) {
+                flex: 0 0 auto;
+            }
+        `,
 
         "command-row": styled.css `
-                display: flex;
-                align-items: center;
-                align-content: center;
-                background-color: ${vars.commandBgColor};
-                border-radius: 9999px;
-                padding: 7px;
-                gap: ${vars.spacing};
-            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`)
-            .nested("button", styled.css `
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            background-color: ${vars.commandBgColor};
+            border-radius: 9999px;
+            padding: 7px;
+            gap: ${vars.spacing};
+
+            & > *:not([data-flex]) {
+                flex: 0 0 auto;
+            }
+
+            & button {
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
                 border-radius: 9999px;
                 padding: ${vars.spacingSmall};
                 padding-left: ${vars.spacing};
                 padding-right: ${vars.spacing};
-            `.and(":hover", styled.css `
-                background-color: ${vars.accentColor};
-                color: ${vars.accentTextColor};
-            `
-        )),
+
+                &:hover {
+                    background-color: ${vars.accentColor};
+                    color: ${vars.accentTextColor};
+                    border-radius: 9999px;
+                    padding: ${vars.spacingSmall};
+                    padding-left: ${vars.spacing};
+                    padding-right: ${vars.spacing};
+                }
+            }
+        `,
     
         "sticky-command-row": styled.css `
-                position: sticky;
-                bottom: ${vars.spacing};
-                display: flex;
-                align-items: center;
-                align-content: center;
-                background-color: ${vars.commandBgColor};
-                border-radius: 9999px;
-                padding: 7px;
-                gap: ${vars.spacing};
-            `.child("*:not([data-flex])", styled.css `flex: 0 0 auto;`)
-            .nested("button", styled.css `
+
+            position: sticky;
+            bottom: ${vars.spacing};
+            display: flex;
+            align-items: center;
+            align-content: center;
+            background-color: ${vars.commandBgColor};
+            border-radius: 9999px;
+            padding: 7px;
+            gap: ${vars.spacing};
+
+            & > *:not([data-flex]) {
+                flex: 0 0 auto;
+            }
+
+            & button {
                 background-color: ${vars.accentColor};
                 color: ${vars.accentTextColor};
                 border-radius: 9999px;
                 padding: ${vars.spacingSmall};
                 padding-left: ${vars.spacing};
                 padding-right: ${vars.spacing};
-            `.and(":hover", styled.css `
-                background-color: ${vars.accentColor};
-                color: ${vars.accentTextColor};
-            `
-        )),
+
+                &:hover {
+                    background-color: ${vars.accentColor};
+                    color: ${vars.accentTextColor};
+                    border-radius: 9999px;
+                    padding: ${vars.spacingSmall};
+                    padding-left: ${vars.spacing};
+                    padding-right: ${vars.spacing};
+                }
+            }            
+        `,
         "warning": styled.css `
             margin: ${vars.spacingMedium};
             padding: ${vars.spacingMedium};

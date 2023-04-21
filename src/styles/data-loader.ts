@@ -11,11 +11,13 @@ styled.add({
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-        `.child("*", styled.css `
-            grid-row: 1;
-            grid-column: 1;
-            align-self: center;
-            justify-self: center;
-        `)
+
+            & > * {
+                grid-row: 1;
+                grid-column: 1;
+                align-self: center;
+                justify-self: center;
+            }
+        `
     }
 })
