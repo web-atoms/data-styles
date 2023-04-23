@@ -138,10 +138,11 @@ export type IStyleValue = string | { name: string, value: string };
 
 export const pair = (name: string , value?: string ) => ( !value ? (value=name, name = name.replace(" ", "-")) : (name), { name, value });
 
-export const createSet = (name: string, values: IStyleValue[]) => {
+export const createSet = (name: string, values: IStyleValue[], appendGlobals = true) => {
     const r = {
         "*": styled.css `${name}: attr(${"data-" + name});`
     };
+    values.push(... ["inherit", "initial", "revert", "revert-layer", "unset"]);
     for (const iterator of values) {
         if (typeof iterator === "string") {
             r[iterator] = styled.css `${name}: ${iterator};`;
