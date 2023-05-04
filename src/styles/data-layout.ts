@@ -4,98 +4,6 @@ import vars from "../vars";
 styled.add({
     "data-layout": {
 
-        "row": styled.css `
-
-            display: flex;
-            align-items: center;
-            align-content: center;
-            gap: ${vars.spacing};
-
-            & > *:not([data-flex]) {
-                flex: 0 0 auto;
-            }
-        `,
-
-        "command-row": styled.css `
-
-            display: flex;
-            align-items: center;
-            align-content: center;
-            background-color: ${vars.commandBgColor};
-            border-radius: 9999px;
-            padding: 7px;
-            gap: ${vars.spacing};
-
-            & > *:not([data-flex]) {
-                flex: 0 0 auto;
-            }
-
-            & button {
-                background-color: ${vars.accentColor};
-                color: ${vars.accentTextColor};
-                border-radius: 9999px;
-                padding: ${vars.spacingSmall};
-                padding-left: ${vars.spacing};
-                padding-right: ${vars.spacing};
-
-                &:hover {
-                    background-color: ${vars.accentColor};
-                    color: ${vars.accentTextColor};
-                    border-radius: 9999px;
-                    padding: ${vars.spacingSmall};
-                    padding-left: ${vars.spacing};
-                    padding-right: ${vars.spacing};
-                }
-            }
-        `,
-    
-        "sticky-command-row": styled.css `
-
-            position: sticky;
-            bottom: ${vars.spacing};
-            display: flex;
-            align-items: center;
-            align-content: center;
-            background-color: ${vars.commandBgColor};
-            border-radius: 9999px;
-            padding: 7px;
-            gap: ${vars.spacing};
-
-            & > *:not([data-flex]) {
-                flex: 0 0 auto;
-            }
-
-            & button {
-                background-color: ${vars.accentColor};
-                color: ${vars.accentTextColor};
-                border-radius: 9999px;
-                padding: ${vars.spacingSmall};
-                padding-left: ${vars.spacing};
-                padding-right: ${vars.spacing};
-
-                &:hover {
-                    background-color: ${vars.accentColor};
-                    color: ${vars.accentTextColor};
-                    border-radius: 9999px;
-                    padding: ${vars.spacingSmall};
-                    padding-left: ${vars.spacing};
-                    padding-right: ${vars.spacing};
-                }
-            }            
-        `,
-        "warning": styled.css `
-            margin: ${vars.spacingMedium};
-            padding: ${vars.spacingMedium};
-            border-radius: ${vars.spacingMedium};
-            background-color: ${vars.warningColor};
-            border: solid 1px darkgray;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: ${vars.spacing};
-        `,
-
         "grid2x2": styled.css `
             display: grid;
             grid-template-columns: auto auto;
@@ -108,11 +16,6 @@ styled.add({
             grid-template-rows: auto 1fr auto;
         `,
 
-        "flex-wrap": styled.css `
-            display: flex;
-            gap: ${vars.spacing};
-            flex-wrap: wrap;
-        `,
 
         "flex": styled.css `
             display: flex;
