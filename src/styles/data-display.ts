@@ -11,5 +11,6 @@ styled.add({
             display: flex ;
             flex-direction: column;
         `,
+        "none": styled.css `display: none;`
     }
 });
