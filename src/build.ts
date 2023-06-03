@@ -73,6 +73,9 @@ const buildTs = () => {
     for (const style of allStyles) {
         for (const key in style) {
             if (Object.prototype.hasOwnProperty.call(style, key)) {
+                if (key.endsWith("]")) {
+                    continue;
+                }
                 const element = style[key];
                 let list = map.get(key);
                 if (!list) {
