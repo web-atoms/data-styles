@@ -35,15 +35,6 @@ styled.add({
                 padding: ${vars.spacingSmall};
                 padding-left: ${vars.spacing};
                 padding-right: ${vars.spacing};
-
-                &:hover {
-                    background-color: ${vars.accentColor};
-                    color: ${vars.accentTextColor};
-                    border-radius: 9999px;
-                    padding: ${vars.spacingSmall};
-                    padding-left: ${vars.spacing};
-                    padding-right: ${vars.spacing};
-                }
             }
         `,
 
@@ -70,15 +61,6 @@ styled.add({
                 padding: ${vars.spacingSmall};
                 padding-left: ${vars.spacing};
                 padding-right: ${vars.spacing};
-
-                &:hover {
-                    background-color: ${vars.accentColor};
-                    color: ${vars.accentTextColor};
-                    border-radius: 9999px;
-                    padding: ${vars.spacingSmall};
-                    padding-left: ${vars.spacing};
-                    padding-right: ${vars.spacing};
-                }
             }            
         `,        
     }
