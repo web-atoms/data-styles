@@ -50,4 +50,4 @@ styled.add({
         ... createButton({ name: "reject-", backgroundColor: vars.rejectColor, color: vars.rejectTextColor, help: "with default reject color (usually dark red) set by --reject-color"}),
     }
 
-});
+}, true);

@@ -116,11 +116,12 @@ export type IStyleFragmentSet = {
 }
 
 const styles: IStyleFragmentSet[] = [];
+const lowStyles: IStyleFragmentSet[] = [];
 
 const styled = {
 
     get styles() {
-        return styles;
+        return [... lowStyles, ... styles];
     },
 
     css: (t: TemplateStringsArray, ... a: any[]) => {
@@ -135,7 +136,11 @@ const styled = {
         return StyleFragment.newStyle( { content: r });
     },
 
-    add(x: IStyleFragmentSet) {
+    add(x: IStyleFragmentSet, high = false) {
+        if (!high) {
+            lowStyles.push(x);
+            return;
+        }
         styles.push(x);
     },
 };
