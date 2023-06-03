@@ -34,6 +34,10 @@ const buildCssStyle = (k: string, o: IStyleFragments) => {
                 // r += `[${k}] ${element}\n`;
                 continue;    
             }
+            if (k.endsWith("]")) {
+                r += element.expand(`${k.substring(0, k.length - 1)}=${key}]`) + "\n";
+                continue;
+            } 
             r += element.expand(`[${k}=${key}]`) + "\n";
             // r += `[${k}=${key}] { ${element} }\n`;
         }
