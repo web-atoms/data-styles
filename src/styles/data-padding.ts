@@ -62,4 +62,4 @@ styled.add({
         "medium": styled.css `margin-bottom: ${vars.spacingMedium} ;`,
         "large": styled.css `margin-bottom: ${vars.spacingLarge} ;`,
     },
-});
+}, "high");

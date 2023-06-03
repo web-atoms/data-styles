@@ -10,4 +10,4 @@ styled.add({
             flex-wrap: wrap;
         `,
     }
-})
+}, "low")

@@ -8,4 +8,4 @@ styled.add({
         "stretch-quarter": styled.css `flex: 1 1 25% ;`,
         "stretch-three-fourth": styled.css `flex: 1 1 75% ;`,
     }
-});
+}, "high");

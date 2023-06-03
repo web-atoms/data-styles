@@ -183,4 +183,4 @@ styled.add({
         "full": styled.css `border-bottom-right-radius: 9999px ;`,
     },
 
-});
+}, "high");

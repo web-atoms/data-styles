@@ -7,4 +7,4 @@ styled.add({
         "normal": styled.css `font-style: normal ;`,
         "oblique": styled.css `font-style: oblique ;`,
     }
-});
+}, "high");

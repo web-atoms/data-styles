@@ -8,4 +8,4 @@ styled.add({
         "bolder": styled.css `font-weight: bolder ;`,
         "lighter": styled.css `font-weight: lighter ;`,
     }
-});
+}, "high");

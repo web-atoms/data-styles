@@ -8,4 +8,4 @@ styled.add({
         "medium": styled.css `font-size: medium ;`,
         "large": styled.css `font-size: large ;`,
     }
-});
+}, "high");

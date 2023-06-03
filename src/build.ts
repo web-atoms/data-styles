@@ -2,14 +2,12 @@ import { writeFileSync, readFileSync, readdirSync } from "fs";
 import { join, parse } from "path";
 import styled, { IStyleFragments } from "./styled";
 
-const allStyles = styled.styles;
-
-const buildAllStyles = (start, styles) => {
+const buildAllStyles = (start) => {
 
     for(const f of readdirSync(start, { withFileTypes: true })) {
         const name = join(start, f.name);
         if(f.isDirectory()) {
-            buildAllStyles(name, styles);
+            buildAllStyles(name);
             continue;
         }
         const parsedPath = parse(name);
@@ -23,7 +21,7 @@ const buildAllStyles = (start, styles) => {
 
 };
 
-buildAllStyles(join( __dirname, "styles"), allStyles);
+buildAllStyles(join( __dirname, "styles"));
 
 const buildCssStyle = (k: string, o: IStyleFragments) => {
     let r = "";
@@ -48,6 +46,7 @@ const outputPath = (name) => join(__dirname, ".." , name);
 // build css...
 const buildCss = () => {
     let start = "";
+    const allStyles = styled.styles;
     for (const iterator of allStyles) {
         for (const key in iterator) {
             if (Object.prototype.hasOwnProperty.call(iterator, key)) {
@@ -66,6 +65,7 @@ const buildTs = () => {
 
     const map = new Map<string, string[]>();
 
+    const allStyles = styled.styles;
     for (const style of allStyles) {
         for (const key in style) {
             if (Object.prototype.hasOwnProperty.call(style, key)) {

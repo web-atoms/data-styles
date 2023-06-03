@@ -16,4 +16,4 @@ styled.add({
         "white": styled.css `background-color: white ;`,
         "accent": styled.css `background-color: ${vars.accentColor} ;`,
     }
-});
+}, "high");

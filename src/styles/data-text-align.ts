@@ -8,4 +8,4 @@ styled.add({
         "center": styled.css `text-align: center ;`,
         "justify": styled.css `text-align: justify ;`,
     }
-});
+}, "high");

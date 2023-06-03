@@ -13,4 +13,4 @@ styled.add({
         `,
         "none": styled.css `display: none;`
     }
-});
+}, "high");

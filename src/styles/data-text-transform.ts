@@ -5,4 +5,4 @@ styled.add({
         "none", "capitalize", "uppercase", "lowercase", "full-width", "full-size-kana",
         "inherit", "initial", "revert", "revert-layer", "unset"
     ])
-});
+}, "high");

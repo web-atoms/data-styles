@@ -42,4 +42,4 @@ styled.add({
             "zoom-out"
         ])
     }
-});
+}, "high");

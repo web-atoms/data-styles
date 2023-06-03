@@ -32,4 +32,4 @@ styled.add({
             gap: ${vars.spacing};
         `
     }
-});
+}, "low");

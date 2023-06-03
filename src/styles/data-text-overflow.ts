@@ -11,4 +11,4 @@ styled.add({
             overflow: hidden;
         `
     }
-});
+},"high");

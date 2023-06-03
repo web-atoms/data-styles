@@ -25,4 +25,4 @@ styled.add({
         "span3": styled.css `grid-column-end: 3;`,
         "span4": styled.css `grid-column-end: 4;`,
     },
-});
+}, "high");

@@ -22,4 +22,4 @@ styled.add({
         "scroll": styled.css `overflow-y: scroll;`,
         "visible": styled.css `overflow-y: visible;`,
     }
-});
+}, "high");
