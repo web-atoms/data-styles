@@ -48,7 +48,8 @@ styled.add({
             border-radius: 9999px;
             padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
-
+            bottom: 0;
+            
             & > *:not([data-flex]) {
                 flex: 0 0 auto;
             }
