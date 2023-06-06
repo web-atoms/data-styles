@@ -41,13 +41,12 @@ styled.add({
         "sticky-command-row": styled.css `
 
             position: sticky;
-            bottom: ${vars.spacing};
             display: flex;
             align-items: center;
             align-content: center;
             background-color: ${vars.commandBgColor};
             border-radius: 9999px;
-            padding: 7px;
+            padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
 
             & > *:not([data-flex]) {
