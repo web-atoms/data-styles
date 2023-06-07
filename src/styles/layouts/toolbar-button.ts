@@ -4,6 +4,9 @@ import vars from "../../vars";
 const toolbarButton = styled.css `
     border: solid 1px transparent;
     padding: ${vars.spacingSmall};
+    padding-left: ${vars.spacing};
+    padding-right: ${vars.spacing};
+    background-color: transparent;
     &:hover {
         border-color: ${vars.accentColor}
     }
