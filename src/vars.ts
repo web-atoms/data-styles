@@ -51,7 +51,9 @@ const vars = {
     commandBgColor: "#F0F0F0",
 
     menuBgColor: "#808080",
-    menuColor: "#F0F0F0"
+    menuColor: "#F0F0F0",
+
+    linkColor: "blue"
 
 };
 
