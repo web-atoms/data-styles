@@ -7,6 +7,11 @@ styled.add({
             border: none;
             text-decoration: none;
             color: ${vars.linkColor};
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 5px;
             &:hover {
                 text-decoration: underline;
             }
