@@ -10,6 +10,7 @@ const toolbarButton = styled.css `
     cursor: pointer;
     &:hover {
         border-color: ${vars.accentColor};
+        color: ${vars.accentColor};
     }
 `;
 
