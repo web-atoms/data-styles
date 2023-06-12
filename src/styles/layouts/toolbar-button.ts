@@ -7,8 +7,23 @@ const toolbarButton = styled.css `
     padding-left: ${vars.spacing};
     padding-right: ${vars.spacing};
     background-color: transparent;
+    cursor: pointer;
     &:hover {
-        border-color: ${vars.accentColor}
+        border-color: ${vars.accentColor};
+    }
+`;
+
+const toolbarButtonAnchor = styled.css `
+    border: solid 1px transparent;
+    padding: ${vars.spacingSmall};
+    padding-left: ${vars.spacing};
+    padding-right: ${vars.spacing};
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        border-color: ${vars.accentColor};
+        text-decoration: underline;
     }
 `;
 
@@ -18,5 +33,8 @@ styled.add({
     },
     "button[data-layout]": {
         "toolbar-button": toolbarButton
+    },
+    "a[data-layout]": {
+        "toolbar-button": toolbarButtonAnchor
     }
 }, "low");

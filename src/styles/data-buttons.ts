@@ -18,6 +18,7 @@ const createButton = (
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
+            text-decoration: none;
             ${backgroundColor ? "background-color:" + backgroundColor + ";" : ""}
             ${color ? "color:" + color + ";" : ""}
         `.help(`${name}button: Text Button, ${help}`),
@@ -32,6 +33,7 @@ const createButton = (
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
+            text-decoration: none;
             ${backgroundColor ? "background-color:" + backgroundColor + ";" : ""}
             ${color ? "color:" + color + ";" : ""}
         `.help(`${name}icon-button: Horizontal centered flex layout, ${help}`),
