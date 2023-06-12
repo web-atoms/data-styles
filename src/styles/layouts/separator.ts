@@ -5,7 +5,7 @@ styled.add({
     "data-layout": {
         "separator": styled.css `
             display: inline-block;
-            height: 1ch;
+            height: 80%;
             width: 1px;
             border-right: solid 1px ${vars.borderColor};
             margin-left: ${vars.spacing};
