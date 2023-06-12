@@ -163,10 +163,10 @@ export const createSet = (name: string, values: IStyleValue[], appendGlobals = t
     values.push(... ["inherit", "initial", "revert", "revert-layer", "unset"]);
     for (const iterator of values) {
         if (typeof iterator === "string") {
-            r[iterator] = styled.css `${name}: ${iterator};`;
+            r[iterator] = styled.css `\t${name}: ${iterator};`;
             continue;
         }
-        r[iterator.name] = styled.css `${name}: ${iterator.value};`;
+        r[iterator.name] = styled.css `\t${name}: ${iterator.value};`;
     }
     return r as any;
 };
