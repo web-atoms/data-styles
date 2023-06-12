@@ -1,24 +1,35 @@
 import styled, { createSet, pair } from "../styled";
 import vars from "../vars";
 
-const spacing = (name) => createSet(name,
+const common = [
+    pair("medium", vars.spacingMedium),
+    pair("large", vars.spacingLarge),
+    pair("small", vars.spacingSmall),
+    pair("none", "0")
+];
+
+const padding = () => createSet("padding",
     [
-        pair("default", vars.spacing),
-        pair("medium", vars.spacingMedium),
-        pair("large", vars.spacingLarge),
-        pair("small", vars.spacingSmall),
-        pair("none", "0")
+        pair("auto", vars.spacing),
+        ... common
     ], true);
 
-styled.add({
-    "data-padding": spacing("padding"),
-    "data-padding-left": spacing("padding"),
-    "data-padding-right": spacing("padding"),
-    "data-padding-top": spacing("padding"),
-    "data-padding-bottom": spacing("padding"),
-    "data-margin": spacing("margin"),
-    "data-margin-left": spacing("margin"),
-    "data-margin-right": spacing("margin"),
-    "data-margin-top": spacing("margin"),
-    "data-margin-bottom": spacing("margin"),
+const margin = () => createSet("padding",
+    [
+        pair("auto", "margin"),
+        pair("default", vars.spacing),
+        ... common
+    ], true);
+
+    styled.add({
+    "data-padding": padding(),
+    "data-padding-left": padding(),
+    "data-padding-right": padding(),
+    "data-padding-top": padding(),
+    "data-padding-bottom": padding(),
+    "data-margin": margin(),
+    "data-margin-left": margin(),
+    "data-margin-right": margin(),
+    "data-margin-top": margin(),
+    "data-margin-bottom": margin(),
 }, "high");
