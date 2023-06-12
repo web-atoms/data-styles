@@ -24,6 +24,7 @@ const toolbarButtonAnchor = styled.css `
     &:hover {
         border-color: ${vars.accentColor};
         text-decoration: underline;
+        color: ${vars.accentColor};
     }
 `;
 
