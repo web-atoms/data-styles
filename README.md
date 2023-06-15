@@ -24,7 +24,10 @@ Data styles utilizes data attributes to specify some easy styles. `data-styles.d
 
 # Why?
 1. Data Styles are composable, you can combine multiple attributes on single node.
-2. Why not style attribute? Style attribute is heavy, and it is not customizable, for example, we have a styled call `data-layout="accent-button"`. When you are creating reusable components, you can specify initial styles using data attributes. And end user can customize styles based on desired design needs. Inline style does not allow other customizations such as media queries and pseudo elements and other customizations such as hover, active etc.
+# Why not style attribute?
+1. Style attribute is heavy, there is additional CSSStyleDeclaration created and associated with each element along with actual style that to be displayed.
+2. Style attribute requires parsing every time the style has been set, where else when set in data attribute, all styles are already parsed and they are associated with element quickly.
+3. Style attribute is not customizable, for example, we have a styled call `data-layout="accent-button"`. When you are creating reusable components, you can specify initial styles using data attributes. And end user can customize styles based on desired design needs. Inline style does not allow other customizations such as media queries and pseudo elements and other customizations such as hover, active etc.
 
 # Layouts
 We have created some basic layouts that are reusable and customizable.
