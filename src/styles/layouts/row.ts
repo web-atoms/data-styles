@@ -9,6 +9,7 @@ styled.add({
                 align-items: center;
                 align-content: center;
                 gap: ${vars.spacing};
+                padding: ${vars.spacing};
 
                 & > *:not([data-flex]) {
                     flex: 0 0 auto;
@@ -21,7 +22,7 @@ styled.add({
             align-content: center;
             background-color: ${vars.commandBgColor};
             border-radius: 9999px;
-            padding: 7px;
+            padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
 
             & > *:not([data-flex]) {
