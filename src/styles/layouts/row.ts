@@ -5,16 +5,29 @@ styled.add({
     "data-layout": {
         "row": styled.css `
 
-                display: flex;
-                align-items: center;
-                align-content: center;
-                gap: ${vars.spacing};
-                padding: ${vars.spacing};
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: ${vars.spacing};
 
-                & > *:not([data-flex]) {
-                    flex: 0 0 auto;
-                }
+            & > *:not([data-flex]) {
+                flex: 0 0 auto;
+            }
             `,
+
+        "header-row": styled.css `
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: ${vars.spacing};
+            padding: ${vars.spacing};
+
+            & > *:not([data-flex]) {
+                flex: 0 0 auto;
+            }
+        `.help("Flex row with padding"),
+
         "command-row": styled.css `
 
             display: flex;
