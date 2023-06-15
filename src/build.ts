@@ -23,6 +23,13 @@ const buildAllStyles = (start) => {
 
 buildAllStyles(join( __dirname, "styles"));
 
+const encodeKey = (key: string) => {
+    if(/^[a-z][a-z\-0-9]*$/i.test(key)) {
+        return key;
+    }
+    return JSON.stringify(key);
+};
+
 const buildCssStyle = (k: string, o: IStyleFragments) => {
     let r = "";
     for (const key in o) {
@@ -34,11 +41,12 @@ const buildCssStyle = (k: string, o: IStyleFragments) => {
                 // r += `[${k}] ${element}\n`;
                 continue;    
             }
+            const encodedKey = encodeKey(key);
             if (k.endsWith("]")) {
-                r += element.expand(`${k.substring(0, k.length - 1)}=${key}]`) + "\n";
+                r += element.expand(`${k.substring(0, k.length - 1)}=${encodedKey}]`) + "\n";
                 continue;
             } 
-            r += element.expand(`[${k}=${key}]`) + "\n";
+            r += element.expand(`[${k}=${encodedKey}]`) + "\n";
             // r += `[${k}=${key}] { ${element} }\n`;
         }
     }
