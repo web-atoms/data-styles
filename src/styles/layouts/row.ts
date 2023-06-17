@@ -19,7 +19,6 @@ styled.add({
 
             display: flex;
             align-items: center;
-            align-content: center;
             gap: ${vars.spacing};
             padding: ${vars.spacing};
 
