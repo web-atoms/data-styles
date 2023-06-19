@@ -133,10 +133,9 @@ System.register([], function(_export, _context) {
     return {
         setters: [],
         execute: function() {
-            const t = ${text};
             const style = document.createElement("style");
             style.id = "data-styles";
-            style.textContent = t;
+            style.src = _context.meta.resolve("./data-styles.css");
             document.head.appendChild(style);       
         }
     };
