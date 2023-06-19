@@ -16,7 +16,7 @@ const padding = () => createSet("padding",
 
 const margin = () => createSet("margin",
     [
-        pair("auto", "margin"),
+        pair("auto", "auto"),
         pair("default", vars.spacing),
         ... common
     ], true);
