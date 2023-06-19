@@ -133,9 +133,13 @@ System.register([], function(_export, _context) {
     return {
         setters: [],
         execute: function() {
+
+            const cssModule = _context.meta.resolve("./data-styles.css");
+            const cssURL = System.resolve(cssModule);
+
             const link = document.createElement("link");
             link.id = "data-styles";
-            link.setAttribute("href", _context.meta.resolve("./data-styles.css"));
+            link.setAttribute("href", cssURL);
             link.setAttribute("rel", "stylesheet");
             link.setAttribute("as", "style");
             link.setAttribute("crossorigin", "anonymous");
