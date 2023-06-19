@@ -47,7 +47,7 @@ styled.add({
         ... createButton({ name: "accent-", backgroundColor: vars.accentColor, color: vars.accentTextColor, help: "with default accent color set by --accent-color"}),
         ... createButton({ name: "stop-", backgroundColor: vars.stopColor, color: vars.stopTextColor, help: "with default stop color (usually red) set by --stop-color"}),
         ... createButton({ name: "go-", backgroundColor: vars.goColor, color: vars.goTextColor, help: "with default go color (usually green) set by --go-color"}),
-        ... createButton({ name: "accept-", backgroundColor: vars.goColor, color: vars.goTextColor, help: "with default accept color (usually blue) set by --accept-color"}),
+        ... createButton({ name: "accept-", backgroundColor: vars.acceptColor, color: vars.acceptTextColor, help: "with default accept color (usually blue) set by --accept-color"}),
         ... createButton({ name: "warning-", backgroundColor: vars.warningColor, color: vars.warningTextColor, help: "with default warning color (usually yellow) set by --warning-color"}),
         ... createButton({ name: "reject-", backgroundColor: vars.rejectColor, color: vars.rejectTextColor, help: "with default reject color (usually dark red) set by --reject-color"}),
     },
@@ -56,7 +56,7 @@ styled.add({
         ... createButton({ name: "accent-", backgroundColor: vars.accentColor, color: vars.accentTextColor, help: "with default accent color set by --accent-color"}),
         ... createButton({ name: "stop-", backgroundColor: vars.stopColor, color: vars.stopTextColor, help: "with default stop color (usually red) set by --stop-color"}),
         ... createButton({ name: "go-", backgroundColor: vars.goColor, color: vars.goTextColor, help: "with default go color (usually green) set by --go-color"}),
-        ... createButton({ name: "accept-", backgroundColor: vars.goColor, color: vars.goTextColor, help: "with default accept color (usually blue) set by --accept-color"}),
+        ... createButton({ name: "accept-", backgroundColor: vars.acceptColor, color: vars.acceptTextColor, help: "with default accept color (usually blue) set by --accept-color"}),
         ... createButton({ name: "warning-", backgroundColor: vars.warningColor, color: vars.warningTextColor, help: "with default warning color (usually yellow) set by --warning-color"}),
         ... createButton({ name: "reject-", backgroundColor: vars.rejectColor, color: vars.rejectTextColor, help: "with default reject color (usually dark red) set by --reject-color"}),
     }
