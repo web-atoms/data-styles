@@ -7,8 +7,14 @@ styled.add({
             display: flex;
             align-items: center;
             justify-items: center;
+            flex-direction: column;
+
+            padding: ${vars.spacing};
 
             & > * {
+                border: solid 1px lightgray;
+                border-bottom: none;
+                padding: ${vars.spacing};
                 min-width: 200px;
                 width: 900px;
                 display: grid;
@@ -16,6 +22,22 @@ styled.add({
                 grid-template-rows: auto auto;
                 gap: ${vars.spacing};
                 align-items: center;
+
+                &:hover {
+                    background-color: #80808080;
+                }
+
+                &:first-child {
+                    border-top-left-radius: ${vars.spacing};
+                    border-top-right-radius: ${vars.spacing};
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: ${vars.spacing};
+                    border-bottom-right-radius: ${vars.spacing};
+                    border-bottom: solid 1px lightgray;
+                }
+
                 & > .icon, & > [data-element=icon] {
                     grid-column: 1;
                     grid-row: 1;
@@ -34,13 +56,15 @@ styled.add({
                 & > .center-title, & > [data-element=center-title] {
                     grid-column: 3;
                     grid-row: 1 / span 2;
-                    place-self: left;
+                    place-self: start;
                     align-self: center;
+                    font-weight: bold;
                 }
                 & > .title, & > [data-element=title] {
                     grid-column: 3;
                     grid-row: 1;
-                    place-self: left;
+                    place-self: start;
+                    font-weight: bold;
                 }
                 & > .description, & > [data-element=description] {
                     grid-column: 3;
@@ -56,7 +80,7 @@ styled.add({
                 & > .action-top-left, & > [data-element=action-top-left] {
                     grid-column: 4;
                     grid-row: 1;
-                    justify-self: left;
+                    justify-self: start;
                 }
                 & > .action-top-right, & > [data-element=action-top-right] {
                     grid-column: 5;
@@ -66,7 +90,7 @@ styled.add({
                 & > .action-bottom-left, & > [data-element=action-bottom-left] {
                     grid-column: 4;
                     grid-row: 2;
-                    justify-self: left;
+                    justify-self: start;
                 }
                 & > .action-bottom-right, & > [data-element=action-bottom-right] {
                     grid-column: 5;
