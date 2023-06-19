@@ -1,5 +1,5 @@
 function *divide (text: string) {
-    const regex = /^(([^\{\n]+\{[\tx20]*)|([^\n]*\}[\tx20]*))$/gm;
+    const regex = /^(([^\{\n]+\{[\t\x20]*)|([^\n\}]*\}[^\S\n\r]*))$/gm;
     let m;
     let sentOnce = false;
     let lastIndex = 0;
