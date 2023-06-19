@@ -23,6 +23,13 @@ styled.add({
                 gap: ${vars.spacing};
                 align-items: center;
 
+                & > a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
                 &:hover {
                     background-color: #80808020;
                 }
@@ -41,30 +48,30 @@ styled.add({
                 & > .icon, & > [data-element=icon] {
                     grid-column: 1;
                     grid-row: 1;
-                    place-self: center;
+                    justify-self: center;
                 }
                 & > .title-icon, & > [data-element=title-icon] {
                     grid-column: 2;
                     grid-row: 1;
-                    place-self: center;
+                    justify-self: center;
                     cursor: pointer;
                 }
                 & > .description-icon, & > [data-element=description-icon] {
                     grid-column: 2;
                     grid-row: 2;
-                    place-self: center;
+                    justify-self: center;
                 }
                 & > .center-title, & > [data-element=center-title] {
                     grid-column: 3;
                     grid-row: 1 / span 2;
-                    place-self: start;
+                    justify-self: start;
                     align-self: center;
                     font-weight: bold;
                 }
                 & > .title, & > [data-element=title] {
                     grid-column: 3;
                     grid-row: 1;
-                    place-self: start;
+                    justify-self: start;
                     font-weight: bold;
                     cursor: pointer;
                     &:hover {
@@ -74,13 +81,13 @@ styled.add({
                 & > .description, & > [data-element=description] {
                     grid-column: 3;
                     grid-row: 2;
-                    place-self: left;
+                    justify-self: left;
                     font-size: 0.75em;
                 }
                 & > .action, & > [data-element=action] {
                     grid-column: 4 / span 2;
                     grid-row: 1 / span 2;
-                    place-self: center;
+                    justify-self: center;
                 }
                 & > .action-top-left, & > [data-element=action-top-left] {
                     grid-column: 4;
