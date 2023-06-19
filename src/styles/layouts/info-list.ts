@@ -82,7 +82,7 @@ styled.add({
                     grid-column: 3;
                     grid-row: 2;
                     justify-self: left;
-                    font-size: 0.75em;
+                    font-size: 0.825em;
                 }
                 & > .action, & > [data-element=action] {
                     grid-column: 4 / span 2;
