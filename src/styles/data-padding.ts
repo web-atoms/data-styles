@@ -8,13 +8,13 @@ const common = [
     pair("none", "0")
 ];
 
-const padding = () => createSet("padding",
+const padding = (key) => createSet(key,
     [
         pair("auto", vars.spacing),
         ... common
     ], true);
 
-const margin = () => createSet("margin",
+const margin = (key) => createSet(key,
     [
         pair("auto", "auto"),
         pair("default", vars.spacing),
@@ -22,14 +22,14 @@ const margin = () => createSet("margin",
     ], true);
 
     styled.add({
-    "data-padding": padding(),
-    "data-padding-left": padding(),
-    "data-padding-right": padding(),
-    "data-padding-top": padding(),
-    "data-padding-bottom": padding(),
-    "data-margin": margin(),
-    "data-margin-left": margin(),
-    "data-margin-right": margin(),
-    "data-margin-top": margin(),
-    "data-margin-bottom": margin(),
+    "data-padding": padding("padding"),
+    "data-padding-left": padding("padding-left"),
+    "data-padding-right": padding("padding-right"),
+    "data-padding-top": padding("padding-top"),
+    "data-padding-bottom": padding("padding-bottom"),
+    "data-margin": margin("margin"),
+    "data-margin-left": margin("margin-left"),
+    "data-margin-right": margin("margin-right"),
+    "data-margin-top": margin("margin-top"),
+    "data-margin-bottom": margin("margin-bottom"),
 }, "high");
