@@ -24,7 +24,7 @@ styled.add({
                 align-items: center;
 
                 &:hover {
-                    background-color: #80808080;
+                    background-color: #80808020;
                 }
 
                 &:first-child {
