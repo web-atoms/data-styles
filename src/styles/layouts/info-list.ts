@@ -47,6 +47,7 @@ styled.add({
                     grid-column: 2;
                     grid-row: 1;
                     place-self: center;
+                    cursor: pointer;
                 }
                 & > .description-icon, & > [data-element=description-icon] {
                     grid-column: 2;
@@ -65,6 +66,10 @@ styled.add({
                     grid-row: 1;
                     place-self: start;
                     font-weight: bold;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 & > .description, & > [data-element=description] {
                     grid-column: 3;
