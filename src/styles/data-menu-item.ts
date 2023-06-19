@@ -32,6 +32,9 @@ styled.add({
 
             & > i {
                 color: ${vars.accentColor};
+                min-width: 25px;
+                text-align: center;
+                font-size: 0.9em;
             }
 
             & > [data-element=icon] {
