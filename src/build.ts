@@ -133,10 +133,19 @@ System.register([], function(_export, _context) {
     return {
         setters: [],
         execute: function() {
-            const style = document.createElement("style");
-            style.id = "data-styles";
-            style.src = _context.meta.resolve("./data-styles.css");
-            document.head.appendChild(style);       
+            const link = document.createElement("link");
+            link.id = "data-styles";
+            link.setAttribute("href", _context.meta.resolve("./data-styles.css"));
+            link.setAttribute("rel", "stylesheet");
+            link.setAttribute("as", "style");
+            link.setAttribute("crossorigin", "anonymous");
+            const head = document.head;
+            const firstElementChild = head.firstElementChild;
+            if (firstElementChild) {
+                head.insertBefore(link, firstElementChild);
+            } else {
+                head.appendChild(link);
+            }
         }
     };
 });
