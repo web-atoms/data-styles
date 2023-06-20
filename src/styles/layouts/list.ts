@@ -1,8 +1,11 @@
 import styled from "../../styled";
 import vars from "../../vars";
 
-const list = styled.css `
+const list = ({
+    alignItems = "center"
+}) => styled.css `
     display: flex;
+    align-items: ${alignItems};
     justify-items: center;
     flex-direction: column;
 
@@ -21,6 +24,11 @@ const list = styled.css `
         border-top-right-radius: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        ${ alignItems === "center" ? "" : `
+            min-width: 200px;
+            width: 900px;
+        `}
 
         &:hover {
             background-color: ${vars.hoverColor};
@@ -118,31 +126,21 @@ const list = styled.css `
             grid-row: 2;
             justify-self: end;
         }
+
+        ${ alignItems === "center" ? "" : `
+            @media only screen and (max-width: 600px) {
+                & > * {
+                    width: 100%;
+                }
+            }
+        `}
+
     }
 `;
 
 styled.add({
     "data-layout": {
-        "list": styled.css `
-        align-items: stretch;
-        ${list}
-        `,
-        "main-list": styled.css `
-
-        align-items: center;
-        ${list}
-
-        & > * {
-            min-width: 200px;
-            width: 900px;
-
-        }
-
-        @media only screen and (max-width: 600px) {
-            & > * {
-                width: 100%;
-            }
-        }
-        `.help("Main list occupies more than half of the page and to be used as the only list on page")
+        "list": list({ alignItems: "center"}),
+        "main-list": list({ alignItems: "stretch"}),
     }
 }, "low");
