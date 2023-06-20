@@ -26,7 +26,13 @@ const vars = {
     thicker: "5px",
     thickest: "6px",
 
+    defaultColor: "canvas",
+    defaultTextColor: "canvastext",
+
     borderColor: "lightgray",
+
+    headerColor: "#80808030",
+    headerTextColor: "",
 
     accentColor: "blue",
     accentTextColor: "white",
@@ -34,8 +40,8 @@ const vars = {
     warningColor: "#FFC107",
     warningTextColor: "darkgray",
 
-    selectionColor: "#b0c4de",
-    selectionTextColor: "",
+    selectionColor: "highlight",
+    selectionTextColor: "highlightText",
 
     hoverColor: "#80808020",
     hoverTextColor: "",
