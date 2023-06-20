@@ -142,5 +142,36 @@ styled.add({
     "data-layout": {
         "list": list({ alignItems: "stretch"}),
         "main-list": list({ alignItems: "center"}),
+        "grid-list": styled.css `
+            display: flex;
+            justify-items: center;
+            flex-wrap: wrap;
+            gap: ${vars.spacing};
+            padding: ${vars.spacing};
+
+            & > * {
+                &:hover {
+                    background-color: ${vars.hoverColor};
+                    color: ${vars.hoverTextColor};
+                }
+
+                &[data-selected-item=true] {
+                    background-color: ${vars.selectionColor};
+                    color: ${vars.selectionTextColor};
+                    &:hover {
+                        background-color: ${vars.hoverColor};
+                        color: ${vars.hoverTextColor};
+                    }
+                }
+
+                & > a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        `
     }
+
 }, "low");
