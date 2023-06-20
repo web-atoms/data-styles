@@ -34,8 +34,8 @@ const vars = {
     warningColor: "#FFC107",
     warningTextColor: "darkgray",
 
-    selectionColor: "#0000A0",
-    selectionTextColor: "white",
+    selectionColor: "#b0c4de",
+    selectionTextColor: "",
 
     hoverColor: "#80808020",
     hoverTextColor: "",
