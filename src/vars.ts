@@ -34,6 +34,9 @@ const vars = {
     warningColor: "#FFC107",
     warningTextColor: "darkgray",
 
+    selectionColor: "#0000A0",
+    selectionTextColor: "white",
+
     stopColor: "red",
     stopTextColor: "white",
 

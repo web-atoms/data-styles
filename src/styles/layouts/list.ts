@@ -19,6 +19,11 @@ const list = styled.css `
         gap: ${vars.spacing};
         align-items: center;
 
+        &[data-selected=true] {
+            background-color: ${vars.selectionColor};
+            color: ${vars.selectionTextColor};
+        }
+
         & > a {
             text-decoration: none;
             &:hover {
