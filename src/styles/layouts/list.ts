@@ -129,7 +129,7 @@ const list = ({
 
         ${ alignItems !== "center" ? "" : `
             @media only screen and (max-width: 600px) {
-                & > * {
+                & {
                     width: 100%;
                 }
             }
