@@ -11,7 +11,7 @@ const list = ({
 
     padding: ${vars.spacing};
 
-    & > * {
+    & > [data-item-index], & > [data-element=items-presenter] > [data-item-index] {
         border: solid 1px lightgray;
         border-bottom: none;
         padding: ${vars.spacing};
@@ -149,7 +149,7 @@ styled.add({
             gap: ${vars.spacing};
             padding: ${vars.spacing};
 
-            & > * {
+            & > [data-item-index], & > [data-element=items-presenter] > [data-item-index] {
                 &:hover {
                     background-color: ${vars.hoverColor};
                     color: ${vars.hoverTextColor};
