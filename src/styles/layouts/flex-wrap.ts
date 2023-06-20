@@ -10,6 +10,7 @@ styled.add({
             align-items: center;
             flex-wrap: wrap;
             padding: ${vars.spacing};
+            align-content: flex-start;
         `,
     }
 }, "low")
