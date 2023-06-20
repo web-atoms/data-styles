@@ -18,10 +18,23 @@ const list = styled.css `
         grid-template-rows: auto auto;
         gap: ${vars.spacing};
         align-items: center;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &:hover {
+            background-color: ${vars.hoverColor};
+            color: ${vars.hoverTextColor};
+        }
 
         &[data-selected=true] {
             background-color: ${vars.selectionColor};
             color: ${vars.selectionTextColor};
+            &:hover {
+                background-color: ${vars.hoverColor};
+                color: ${vars.hoverTextColor};
+            }
         }
 
         & > a {
@@ -29,10 +42,6 @@ const list = styled.css `
             &:hover {
                 text-decoration: underline;
             }
-        }
-
-        &:hover {
-            background-color: #80808020;
         }
 
         &:first-child {

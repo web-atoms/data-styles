@@ -37,6 +37,9 @@ const vars = {
     selectionColor: "#0000A0",
     selectionTextColor: "white",
 
+    hoverColor: "#80808020",
+    hoverTextColor: "",
+
     stopColor: "red",
     stopTextColor: "white",
 
