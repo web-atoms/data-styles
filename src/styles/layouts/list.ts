@@ -25,7 +25,7 @@ const list = ({
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
 
-        ${ alignItems === "center" ? "" : `
+        ${ alignItems !== "center" ? "" : `
             min-width: 200px;
             width: 900px;
         `}
@@ -127,7 +127,7 @@ const list = ({
             justify-self: end;
         }
 
-        ${ alignItems === "center" ? "" : `
+        ${ alignItems !== "center" ? "" : `
             @media only screen and (max-width: 600px) {
                 & > * {
                     width: 100%;
@@ -140,7 +140,7 @@ const list = ({
 
 styled.add({
     "data-layout": {
-        "list": list({ alignItems: "center"}),
-        "main-list": list({ alignItems: "stretch"}),
+        "list": list({ alignItems: "stretch"}),
+        "main-list": list({ alignItems: "center"}),
     }
 }, "low");
