@@ -3,7 +3,6 @@ import vars from "../../vars";
 
 const list = styled.css `
     display: flex;
-    align-items: center;
     justify-items: center;
     flex-direction: column;
 
@@ -28,7 +27,7 @@ const list = styled.css `
             color: ${vars.hoverTextColor};
         }
 
-        &[data-selected=true] {
+        &[data-selected-item=true] {
             background-color: ${vars.selectionColor};
             color: ${vars.selectionTextColor};
             &:hover {
@@ -124,8 +123,13 @@ const list = styled.css `
 
 styled.add({
     "data-layout": {
-        list,
+        "list": styled.css `
+        align-items: stretch;
+        ${list}
+        `,
         "main-list": styled.css `
+
+        align-items: center;
         ${list}
 
         & > * {
