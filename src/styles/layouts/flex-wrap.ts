@@ -9,8 +9,13 @@ styled.add({
             gap: ${vars.spacing};
             align-items: center;
             flex-wrap: wrap;
+        `,
+        "flex-wrap-padding": styled.css `
+            display: flex;
+            gap: ${vars.spacing};
+            align-items: center;
+            flex-wrap: wrap;
             padding: ${vars.spacing};
-            align-content: flex-start;
         `,
     }
 }, "low")
