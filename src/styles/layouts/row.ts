@@ -62,6 +62,7 @@ styled.add({
             padding: ${vars.spacingMedium};
             gap: ${vars.spacing};
             bottom: 0;
+            box-shadow: 0 0 10px 1px rgb(0 0 0 / 25%);
             
             & > *:not([data-flex]) {
                 flex: 0 0 auto;
