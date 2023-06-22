@@ -5,7 +5,7 @@ styled.add({
     "data-layout": {
         "card": styled.css `
         display: grid;
-        grid-template-rows: 25px 25px 1fr;
+        grid-template-rows: 25px auto 1fr;
         grid-template-columns: auto auto 1fr auto auto;
         gap: ${vars.spacing};
         justify-items: stretch;
