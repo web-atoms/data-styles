@@ -37,6 +37,9 @@ const vars = {
     accentColor: "blue",
     accentTextColor: "white",
 
+    noteColor: "#ffffe0",
+    noteTextColor: "",
+
     warningColor: "#FFC107",
     warningTextColor: "darkgray",
 
