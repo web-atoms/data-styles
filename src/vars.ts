@@ -71,31 +71,6 @@ const vars = {
     menuColor: "#F0F0F0",
 
     linkColor: "blue",
-
-    size: {
-        extraSmall: "20rem",
-        small: "24rem",
-        medium: "28rem",
-        large: "32rem",
-        extraLarge: "36rem",
-        extraLarge2: "42rem",
-        extraLarge3: "48rem",
-        extraLarge4: "56rem",
-        extraLarge5: "64rem",
-        extraLarge6: "72rem",
-        extraLarge7: "80rem",
-        full : "100%",
-        prose: "65ch",
-    },
-    
-    screen: {
-        small: "640px",
-        medium: "768px",
-        large: "1024px",
-        extraLarge: "1280px",
-        extraLarge2: "1536px"
-    }
-
 };
 
 const camelToSnakeCase = str => str.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
