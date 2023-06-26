@@ -4,8 +4,8 @@ import vars from "../vars";
 const createButton = (
     {
         name,
-        borderColor = vars.accentColor,
         backgroundColor,
+        borderColor = backgroundColor,
         color,
         help
     }: { name: string, borderColor?: string, color?: string, backgroundColor?, help?: string}) => {
@@ -13,8 +13,8 @@ const createButton = (
     return {
         [name + "button"]: styled.css `
             padding: ${vars.spacingSmall};
-            padding-left: ${vars.spacingMedium};
-            padding-right: ${vars.spacingMedium};
+            padding-left: ${vars.spacingLarge};
+            padding-right: ${vars.spacingLarge};
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
@@ -28,8 +28,8 @@ const createButton = (
             justify-content: center;
             gap: ${vars.spacing};
             padding: ${vars.spacingSmall};
-            padding-left: ${vars.spacingMedium};
-            padding-right: ${vars.spacingMedium};
+            padding-left: ${vars.spacingLarge};
+            padding-right: ${vars.spacingLarge};
             cursor: pointer;
             border: solid 1px ${borderColor};
             border-radius: 9999px;
