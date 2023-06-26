@@ -15,5 +15,8 @@ styled.add({
         "black": styled.css `background-color: black ;`,
         "white": styled.css `background-color: white ;`,
         "accent": styled.css `background-color: ${vars.accentColor} ;`,
+        "default": styled.css `color: ${vars.defaultColor} ;`,
+        "highlight": styled.css `color: ${vars.selectionColor} ;`,
+        "selection": styled.css `color: ${vars.selectionColor} ;`,
     }
 }, "high");

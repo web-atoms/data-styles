@@ -14,6 +14,9 @@ styled.add({
         "fuchsia": styled.css `color: fuchsia ;`,
         "black": styled.css `color: black ;`,
         "white": styled.css `color: white ;`,
+        "default": styled.css `color: ${vars.defaultTextColor} ;`,
+        "highlight": styled.css `color: ${vars.selectionTextColor} ;`,
+        "selection": styled.css `color: ${vars.selectionTextColor} ;`,
         "accent": styled.css `color: ${vars.accentColor} ;`,
     }
 }, "high");
