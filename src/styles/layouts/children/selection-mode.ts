@@ -2,7 +2,7 @@ import styled from "../../../styled";
 import vars from "../../../vars";
 
 styled.add({
-    "list-selection": {
+    "data-list-selection": {
         "default": styled.css `
         
         & > [data-item-index], & > [data-element=items-presenter] > [data-item-index] {
