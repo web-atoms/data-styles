@@ -15,8 +15,8 @@ styled.add({
                     background-color: ${vars.selectionColor};
                     color: ${vars.selectionTextColor};
                     &:hover {
-                        background-color: ${vars.hoverColor};
-                        color: ${vars.hoverTextColor};
+                        background-color: ${vars.selectionColor};
+                    color: ${vars.selectionTextColor};
                     }
                 }
 
