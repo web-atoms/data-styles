@@ -18,7 +18,8 @@ styled.add({
             padding: ${vars.spacing};
 
             &:hover {
-                background-color: #A0A0A025;
+                background-color: ${vars.hoverColor};
+                color: ${vars.hoverTextColor};
             }
 
             &[data-selected=true] {
