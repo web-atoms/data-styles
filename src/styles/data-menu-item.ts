@@ -41,11 +41,17 @@ styled.add({
             & > span, & > div, & > label {
                 grid-row: 1;
                 grid-column: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             & > small {
-                grid-row: 1;
+                grid-row: 2;
                 grid-column: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             & > [data-element=icon] {
