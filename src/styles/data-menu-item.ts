@@ -18,13 +18,13 @@ styled.add({
             padding: ${vars.spacing};
 
             &:hover {
-                border-color: ${vars.borderColor};
+                background-color: #A0A0A025;
             }
 
             &[data-selected=true] {
                 font-weight: bold;
-                border-left-color: ${vars.accentColor};
-                border-left-width: medium;
+                background-color: ${vars.selectionColor};
+                color: ${vars.selectionTextColor};
             }
 
             & > i, & > img {
