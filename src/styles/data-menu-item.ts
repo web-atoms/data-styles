@@ -4,8 +4,9 @@ import vars from "../vars";
 styled.add({
     "data-layout": {
         "menu-item": styled.css `
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            grid-template-rows: 1fr auto;
             align-items: center;
             align-content: center;
             cursor: pointer;
@@ -26,23 +27,45 @@ styled.add({
                 border-left-width: medium;
             }
 
-            & > * {
-                flex: 0 0 auto;
-            }
-
-            & > i {
+            & > i, & > img {
                 color: ${vars.accentColor};
                 min-width: 40px;
                 padding: 5px;
                 padding-left: 10px;
                 padding-right: 10px;
                 text-align: center;
+                grid-row: 1 / span 2;
+                grid-column: 1;
+            }
+
+            & > span, & > div, & > label {
+                grid-row: 1;
+                grid-column: 2;
+            }
+
+            & > small {
+                grid-row: 1;
+                grid-column: 2;
             }
 
             & > [data-element=icon] {
+                grid-row: 1 / span 2;
+                grid-column: 1;
                 color: ${vars.accentColor};
             }
 
+            & > [data-element=badge] {
+                grid-row: 1 / span 2;
+                grid-column: 3;
+                margin-left: ${vars.spacing};
+                color: ${vars.accentColor};
+            }
+            & > [data-element=pin] {
+                grid-row: 1 / span 2;
+                grid-column: 4;
+                margin-left: ${vars.spacing};
+                color: ${vars.accentColor};
+            }
         `        
     }
 }, "low");
