@@ -24,6 +24,36 @@ styled.add({
             & > button {
                 margin: ${vars.spacing};
             }
+
+            &:not(header,footer):hover {
+                background-color: ${vars.hoverColor};
+                color: ${vars.hoverTextColor};
+            }
+
+            & > input:first-child:checked ~ * {
+                font-weight: bold;
+            }
+
+            & > a {
+                text-decoration: none;
+            }
+        }
+
+
+
+        & > header {
+            display: table-caption;
+            gap: ${vars.spacing};
+            flex-direction: row;
+            align-items: center;
+        }
+
+        & > footer {
+            display: table-caption;
+            caption-side: bottom;
+            gap: ${vars.spacing};
+            flex-direction: row;
+            align-items: center;
         }
 
         @media only screen and (max-width: 500px) {

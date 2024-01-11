@@ -48,7 +48,7 @@ const vars = {
     selectionColor: "highlight",
     selectionTextColor: "highlightText",
 
-    hoverColor: "#A0A0A010",
+    hoverColor: "#A0A0A050",
     hoverTextColor: "CanvasText",
 
     stopColor: "red",
