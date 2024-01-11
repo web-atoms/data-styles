@@ -21,7 +21,7 @@ function *divide (text: string) {
         }
 
         if (lastMatch.includes("}")) {
-            yield [lastMatch];
+            yield [lastMatch.trim()];
             lastIndex = m.index + match.length;
             lastMatch = match;
             continue;
@@ -32,8 +32,8 @@ function *divide (text: string) {
         lastMatch = match;
     }
 
-    if(lastMatch?.endsWith("}")) {
-        yield [lastMatch];
+    if(lastMatch?.includes("}")) {
+        yield [lastMatch.trim()];
     }
 };
 
