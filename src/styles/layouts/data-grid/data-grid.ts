@@ -15,6 +15,7 @@ styled.add({
             & > * {
                 padding: ${vars.spacing};
                 display: table-cell;
+                vertical-align: top;
             }
 
             & > br {
