@@ -16,6 +16,9 @@ styled.add({
                 padding: ${vars.spacing};
                 display: table-cell;
                 vertical-align: top;
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             & > br {
@@ -68,6 +71,9 @@ styled.add({
                 flex-wrap: wrap;
                 & > * {
                     display: inline-block;
+                    max-width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 & > br {
