@@ -12,7 +12,7 @@ styled.add({
             padding: ${vars.spacing};
 
 
-            & > * {
+            & > *, & > button {
                 padding: ${vars.spacing};
                 display: table-cell;
                 vertical-align: top;
