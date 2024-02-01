@@ -16,10 +16,8 @@ styled.add({
                 padding: ${vars.spacing};
                 display: table-cell;
                 vertical-align: top;
-                max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
+ 
 
             & > br {
                 display: none;
@@ -32,6 +30,11 @@ styled.add({
             &:not(header,footer):hover {
                 background-color: ${vars.hoverColor};
                 color: ${vars.hoverTextColor};
+                & > * {
+                    max-width: 200px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
 
             & > input:first-child:checked ~ * {
