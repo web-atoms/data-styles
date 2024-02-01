@@ -27,9 +27,11 @@ styled.add({
                 margin: ${vars.spacing};
             }
 
-            &:not(header,footer):hover {
-                background-color: ${vars.hoverColor};
-                color: ${vars.hoverTextColor};
+            &:not(header,footer) {
+                &:hover {
+                    background-color: ${vars.hoverColor};
+                    color: ${vars.hoverTextColor};
+                }
                 & > * {
                     max-width: 200px;
                     overflow: hidden;
