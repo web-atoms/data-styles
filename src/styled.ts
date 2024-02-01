@@ -135,13 +135,14 @@ export type IStyleFragmentSet = {
 }
 
 const styles: IStyleFragmentSet[] = [];
+const lowestStyles: IStyleFragmentSet[] = [];
 const lowStyles: IStyleFragmentSet[] = [];
 const highStyles: IStyleFragmentSet[] = [];
 
 const styled = {
 
     get styles() {
-        return [... lowStyles, ... styles, ... highStyles];
+        return [ ... lowestStyles, ... lowStyles, ... styles, ... highStyles];
     },
 
     css: (t: TemplateStringsArray, ... a: any[]) => {
@@ -156,7 +157,11 @@ const styled = {
         return StyleFragment.newStyle( { content: r });
     },
 
-    add(x: IStyleFragmentSet, priority: "high" | "normal" | "low" = "normal") {
+    add(x: IStyleFragmentSet, priority: "high" | "normal" | "low" | "lowest" = "normal") {
+        if (priority === "lowest") {
+            lowestStyles.push(x);
+            return;
+        }
         if (priority === "low") {
             lowStyles.push(x);
             return;

@@ -40,6 +40,32 @@ const createButton = (
     };
 };
 
+const createButtonDisplay = (
+    {
+        name,
+    }: { name: string }) => {
+
+    return {
+        [name + "icon-button"]: styled.css `
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        `,
+    };
+};
+
+styled.add({
+    "button[data-layout]": {
+        ... createButtonDisplay({ name: ""}),
+        ... createButtonDisplay({ name: "accent-"}),
+        ... createButtonDisplay({ name: "stop-"}),
+        ... createButtonDisplay({ name: "go-"}),
+        ... createButtonDisplay({ name: "accept-"}),
+        ... createButtonDisplay({ name: "warning-"}),
+        ... createButtonDisplay({ name: "reject-"}),
+    }
+}, "lowest");
+
 styled.add({
 
     "data-layout": {
