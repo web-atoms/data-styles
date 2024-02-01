@@ -12,7 +12,7 @@ styled.add({
             padding: ${vars.spacing};
 
 
-            & > *, & > button, & > button {
+            & > *, & > button, & > button[data-layout] {
                 padding: ${vars.spacing};
                 display: table-cell;
                 vertical-align: top;
@@ -27,16 +27,15 @@ styled.add({
                 margin: ${vars.spacing};
             }
 
-            &:not(header,footer) {
-                &:hover {
-                    background-color: ${vars.hoverColor};
-                    color: ${vars.hoverTextColor};
-                }
-                & > * {
-                    max-width: 200px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
+            &:not(header,footer):hover {
+                background-color: ${vars.hoverColor};
+                color: ${vars.hoverTextColor};
+            }
+
+            &:not(header,footer) > * {
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             & > input:first-child:checked ~ * {
