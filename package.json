@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/data-styles",
-  "version": "1.0.111",
+  "version": "1.0.112",
   "description": "Easy to use Data Styles",
   "main": "index.js",
   "scripts": {
