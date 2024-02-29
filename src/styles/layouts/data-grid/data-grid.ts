@@ -32,7 +32,7 @@ styled.add({
                 color: ${vars.hoverTextColor};
             }
 
-            &[data-selected-item]:not(header,footer):hover {
+            &[data-selected-item]:not(header,footer) {
                 background-color: ${vars.selectionColor};
                 color: ${vars.selectionTextColor};
             }
