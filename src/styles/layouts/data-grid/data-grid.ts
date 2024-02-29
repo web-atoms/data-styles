@@ -32,6 +32,12 @@ styled.add({
                 color: ${vars.hoverTextColor};
             }
 
+            &[data-selected-item]:not(header,footer):hover {
+                background-color: ${vars.selectionColor};
+                color: ${vars.selectionTextColor};
+            }
+
+
             &:not(header,footer) > * {
                 max-width: 200px;
                 overflow: hidden;
