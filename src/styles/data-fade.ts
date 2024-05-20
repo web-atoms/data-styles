@@ -12,7 +12,7 @@ styled.add({
                 top: 0;
                 bottom : 0;
                 content: "";
-                margin: 10;
+                margin: 10px;
                 pointer-events: none;
                 background: linear-gradient(to top, rgba(255,255,255, 1) 1px, rgba(255,255,255, 0) 16px );
             }
