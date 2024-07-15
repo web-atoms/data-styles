@@ -1,6 +1,7 @@
 import { writeFileSync, readFileSync, readdirSync } from "fs";
 import { join, parse } from "path";
 import styled, { IStyleFragments } from "./styled";
+import { footer } from "./footer";
 
 const buildAllStyles = (start) => {
 
@@ -67,6 +68,7 @@ const buildCss = () => {
             }
         }
     }
+    start += footer;
     writeFileSync(outputPath("data-styles.css"), start, "utf-8");
 };
 
