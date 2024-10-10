@@ -38,7 +38,7 @@ styled.add({
             }
 
 
-            &:not(header):not(footer):not(menu) > * {
+            &:not(header,footer) > *:not(menu) {
                 max-width: 200px;
                 overflow: hidden;
                 text-overflow: ellipsis;
