@@ -15,7 +15,7 @@ styled.add({
             & > *, & > button, & > button[data-layout] {
                 padding: ${vars.spacing};
                 display: table-cell;
-                vertical-align: top;
+                vertical-align: middle;
             }
  
 
