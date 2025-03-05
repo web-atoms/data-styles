@@ -4,7 +4,7 @@ import vars from "../vars";
 const createButton = (
     {
         name,
-        backgroundColor,
+        backgroundColor = "var(--icon-button-background, transparent)",
         borderColor = backgroundColor,
         color,
         help
