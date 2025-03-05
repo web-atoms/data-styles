@@ -5,7 +5,7 @@ const createButton = (
     {
         name,
         backgroundColor = "var(--icon-button-background, transparent)",
-        borderColor = backgroundColor,
+        borderColor = "var(--icon-button-border, transparent)",
         color,
         help
     }: { name: string, borderColor?: string, color?: string, backgroundColor?, help?: string}) => {
