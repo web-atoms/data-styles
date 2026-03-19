@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module":"es2022",
+        "incremental": true,
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        "moduleResolution": "bundler",
+        "outDir": "dist-esm",
+        "downlevelIteration": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "removeComments": true,
+        "importHelpers": true,
+        "jsx": "react",
+        "jsxFactory": "XNode.create",
+        "lib": [
+            "es6",
+            "dom",
+            "ESNext.Disposable",
+            "ES2021.WeakRef"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+		"node_modules",
+		"tests"
+    ]
+}

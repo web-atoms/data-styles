@@ -5,6 +5,10 @@ on:
     tags:
       - '*'
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +21,7 @@ jobs:
       - run: npm ci
       - run: tsc
       - run: node ./build
+      - run: tsc -p tsconfig.esm.json
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
