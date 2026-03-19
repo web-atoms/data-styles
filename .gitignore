@@ -106,3 +106,5 @@ dist
 data-styles.css
 data-styles.d.ts
 data-styles.js
+
+dist-esm
