@@ -1,9 +1,8 @@
 {
   "name": "@web-atoms/data-styles",
-  "version": "1.0.129",
+  "version": "1.0.125",
   "description": "Easy to use Data Styles",
   "main": "index.js",
-  "esm": "dist-esm",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push --follow-tags"
@@ -20,6 +19,6 @@
   },
   "homepage": "https://github.com/web-atoms/data-styles#readme",
   "devDependencies": {
-    "@types/node": "^25.5.0"
+    "@types/node": "^18.15.11"
   }
 }
