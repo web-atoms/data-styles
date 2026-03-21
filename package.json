@@ -3,7 +3,9 @@
   "version": "1.1.2",
   "description": "Easy to use Data Styles",
   "main": "index.js",
-  "esm": "dist-esm",
+  "esm": {
+    "dist": "dist-esm"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postversion": "git push --follow-tags"
